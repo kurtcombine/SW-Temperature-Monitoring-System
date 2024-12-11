@@ -250,7 +250,7 @@
 
 // <e> I2C1 (Inter-integrated Circuit Interface 1) [Driver_I2C1]
 // <i> Configuration settings for Driver_I2C1 in component ::Drivers:I2C
-#define RTE_I2C1                        0
+#define RTE_I2C1                        1
 
 //   <o> I2C1_SCL Pin <0=>P0_1 <1=>P0_20
 #define RTE_I2C1_SCL_PORT_ID            0
@@ -535,11 +535,11 @@
 // </e>
 
 // <e> UART2 (Universal asynchronous receiver transmitter)
-#define RTE_UART2                       0
+#define RTE_UART2                       1
 
 //   <o> UART2_TX Pin <0=>Not used <1=>P0_10 <2=>P2_8
 //   <i> UART2 Serial Output pin
-#define RTE_UART2_TX_ID                 0
+#define RTE_UART2_TX_ID                 1
 #if    (RTE_UART2_TX_ID == 0)
 #define RTE_UART2_TX_PIN_EN             0
 #elif  (RTE_UART2_TX_ID == 1)
@@ -559,7 +559,7 @@
 
 //   <o> UART2_RX Pin <0=>Not used <1=>P0_11 <2=>P2_9
 //   <i> UART2 Serial Input pin
-#define RTE_UART2_RX_ID                 0
+#define RTE_UART2_RX_ID                 1
 #if    (RTE_UART2_RX_ID == 0)
 #define RTE_UART2_RX_PIN_EN             0
 #elif  (RTE_UART2_RX_ID == 1)
