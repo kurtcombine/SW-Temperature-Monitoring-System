@@ -1,3 +1,14 @@
-./objects/main.o: ..\main.c ..\lcd\lcd.h ..\lcd\..\global\global.h \
-  ..\lcd\asciiLib.h ..\ds18b20\onewire_DS18B20.h \
-  ..\ds18b20\..\global\global.h ..\mem\mem.h ..\mem\..\global\global.h
+.\objects\main.o: ..\main.c
+.\objects\main.o: ..\lcd/lcd.h
+.\objects\main.o: ..\lcd/../global/global.h
+.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\main.o: ..\lcd/asciiLib.h
+.\objects\main.o: ..\ds18b20/onewire_DS18B20.h
+.\objects\main.o: ..\ds18b20/../global/global.h
+.\objects\main.o: ..\mem/mem.h
+.\objects\main.o: ..\mem/../global/global.h

@@ -46,7 +46,7 @@ void LCD_Text(int x, int y, const char *s, int color) {
 }
 
 void LCD_Addr(int x, int y, const uint8_t addr[8], int color) {
-    char buf[16];
+    char buf[24];
     snprintf(
         buf, 24, "%02X%02X%02X%02X%02X%02X%02X%02X", addr[0], addr[1], addr[2], addr[3], addr[4], addr[5], addr[6], addr[7]);
     for(int i = 0;; ++i) {
