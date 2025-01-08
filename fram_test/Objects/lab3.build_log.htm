@@ -1,0 +1,146 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.27.0.0
+Copyright (C) 2018 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Andrzej Skoczeñ AGH Flex license: MDK-ARM Professional (mdk_pro) Operation stops: 8 Aug 2026
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.27.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.27.0.0
+Dialog DLL:      DCM.DLL V1.17.2.0
+Target DLL:      UL2CM3.DLL V1.162.7.0
+Dialog DLL:      TCM.DLL V1.36.1.0
+ 
+<h2>Project:</h2>
+D:\systemy wbudowane\fram_test\lab3.uvprojx
+Project File Date:  01/08/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'Target 1'
+compiling main.c...
+..\biblioteki\i2c\eeprom_i2c.h(12): warning:  #1-D: last line of file ends without a newline
+  int32_t EEPROM_Initialize ();
+..\biblioteki\i2c\eeprom_i2c.h(12): warning:  #1295-D: Deprecated declaration EEPROM_Initialize - give arg types
+  int32_t EEPROM_Initialize ();
+main.c(27): warning:  #223-D: function "snprintf" declared implicitly
+      snprintf(buf, 14, "%d\r\n", x);
+main.c(32): warning:  #223-D: function "snprintf" declared implicitly
+      snprintf(buf, 24, "%f", x);
+main.c(37): warning:  #223-D: function "snprintf" declared implicitly
+      snprintf(buf, 26, "%02X:%02X:%02X:%02X:%02X:%02X:%02X:%02X\r\n", addr[0], addr[1], addr[2], addr[3], addr[4], addr[5], addr[6],
+main.c(52): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+  	DEBUG_int(EEPROM_Write_Event(0b0, buf, 0x7ff));
+main.c(58): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+  	DEBUG_int		(EEPROM_Read_Event(i, buf, 8));		DEBUG_addr(buf);
+main.c(58): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "const uint8_t *"
+  	DEBUG_int		(EEPROM_Read_Event(i, buf, 8));		DEBUG_addr(buf);
+main.c(60): warning:  #111-D: statement is unreachable
+  	UART_Send("xd5\r\n");
+main.c(65): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+  		(EEPROM_Read_Event(0b0, buf, 128));
+main.c(66): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "const uint8_t *"
+  		DEBUG_addr(buf);
+main.c(70): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+  		(EEPROM_Write_Event(0b0, buf, 64));
+main.c(71): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "const uint8_t *"
+  		DEBUG_addr(buf);DEBUG_int
+main.c(72): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+  		(EEPROM_Read_Event(0b0, buf, 128));
+main.c(73): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "const uint8_t *"
+  		DEBUG_addr(buf);
+main.c(76): warning:  #1-D: last line of file ends without a newline
+  }
+main.c(63): warning:  #128-D: loop is not reachable
+  	while(0) {
+main.c: 17 warnings, 0 errors
+linking...
+Program Size: Code=6084 RO-data=412 RW-data=24 ZI-data=4904  
+".\Objects\lab3.axf" - 0 Error(s), 17 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.5.1.pack
+                ARM.CMSIS.5.5.1
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: I2C Version: 2.3.0
+   * Component: Custom Version: 2.3.0
+   * Component: CORE Version: 5.2.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.LPC1700_DFP.2.6.1.pack
+                Keil.LPC1700_DFP.2.6.1
+                NXP LPC1700 Series Device Support, Drivers and Examples for MCB1700, Open1768 and LPC1788-32
+   * Component: LED Version: 1.0.0
+   * Component: I2C Version: 2.6.0
+   * Component: GPDMA Version: 1.2.0
+   * Component: GPIO Version: 1.1.0
+   * Component: PIN Version: 1.0.0
+   * Component: Startup Version: 1.0.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.MDK-Middleware.7.8.0.pack
+                Keil.MDK-Middleware.7.8.0
+                Middleware for Keil MDK-Professional and MDK-Plus
+   * Component: LED Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\Device\LPC1768
+  .\RTE\_Target_1
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Driver\Include
+  C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include
+  C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver
+  C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.8.0\Board
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ::Board Support:LED:1.0.0 (API)
+      Include file:  Board\Board_LED.h
+
+   * Component: ::CMSIS Driver:I2C:2.3.0 (API)
+      Include file:  CMSIS\Driver\Include\Driver_I2C.h
+
+   * Component: ARM::CMSIS Driver:I2C:Custom:2.3.0
+      Include file:  CMSIS\Driver\Include\Driver_I2C.h
+      Source file:   CMSIS\Driver\DriverTemplates\Driver_I2C.c
+
+   * Component: ARM::CMSIS:CORE:5.2.0
+
+   * Component: Keil.Open1768::Board Support:LED:1.0.0
+      Source file:   Boards\Waveshare\Open1768\Common\LED_Open1768.c
+
+   * Component: Keil::CMSIS Driver:I2C:2.6.0
+      Source file:   RTE_Driver\I2C_LPC17xx.c
+
+   * Component: Keil::Device:GPDMA:1.2.0
+      Include file:  RTE_Driver\GPDMA_LPC17xx.h
+      Source file:   RTE_Driver\GPDMA_LPC17xx.c
+
+   * Component: Keil::Device:GPIO:1.1.0
+      Source file:   RTE_Driver\GPIO_LPC17xx.c
+      Include file:  RTE_Driver\GPIO_LPC17xx.h
+
+   * Component: Keil::Device:PIN:1.0.0
+      Include file:  RTE_Driver\PIN_LPC17xx.h
+      Source file:   RTE_Driver\PIN_LPC17xx.c
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device\Source\ARM\startup_LPC17xx.s
+      Source file:   Device\Source\system_LPC17xx.c
+      Include file:  RTE_Driver\Config\RTE_Device.h
+      Include file:  Device\Include\LPC17xx.h
+Build Time Elapsed:  00:00:00
+</pre>
+</body>
+</html>

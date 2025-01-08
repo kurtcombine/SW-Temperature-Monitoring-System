@@ -1,0 +1,22 @@
+--cpu Cortex-M3
+".\objects\main.o"
+".\objects\onewire_ds18b20.o"
+".\objects\onewire_ds18b20_mock.o"
+".\objects\lcd_ili9325.o"
+".\objects\open1768_lcd.o"
+".\objects\global_embed.o"
+".\objects\global_mock.o"
+".\objects\asciilib.o"
+".\objects\lcd.o"
+".\objects\lcd_mock.o"
+".\objects\mem.o"
+".\objects\led_mcb1700.o"
+".\objects\gpdma_lpc17xx.o"
+".\objects\gpio_lpc17xx.o"
+".\objects\pin_lpc17xx.o"
+".\objects\startup_lpc17xx.o"
+".\objects\system_lpc17xx.o"
+--strict --scatter ".\Objects\proj.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\proj.map" -o .\Objects\proj.axf

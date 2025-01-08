@@ -1,0 +1,1586 @@
+<html>
+<body>
+<pre>
+<h1>�Vision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: �Vision V5.27.0.0
+Copyright (C) 2018 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Andrzej Skocze� AGH Flex license: MDK-ARM Professional (mdk_pro) Operation stops: 8 Aug 2026
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.27.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.11
+Assembler:       Armasm.exe V6.11
+Linker/Locator:  ArmLink.exe V6.11
+Library Manager: ArmAr.exe V6.11
+Hex Converter:   FromElf.exe V6.11
+CPU DLL:         SARMCM3.DLL V5.27.0.0
+Dialog DLL:      DCM.DLL V1.17.2.0
+Target DLL:      UL2CM3.DLL V1.162.7.0
+Dialog DLL:      TCM.DLL V1.36.1.0
+ 
+<h2>Project:</h2>
+D:\systemy wbudowane\projekt-z-symulacja\uvision\uv_mock_test.uvprojx
+Project File Date:  01/08/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.11', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target_1'
+../lcd/lcd_mock.c(81): warning: ISO C requires a translation unit to contain at least one declaration [-Wempty-translation-unit]
+#endif
+      ^
+1 warning generated.
+compiling lcd_mock.c...
+compiling asciiLib.c...
+../mem/mem.c(1): warning: In file included from...
+../mem/mem.h(1): warning: In file included from...
+../mem/../global/global.h(11): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void global_setup();
+                 ^
+                  void
+../mem/../global/global.h(20): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void DEBUG_halt();
+               ^
+                void
+../mem/mem.c(1): warning: In file included from...
+../mem/mem.h(8): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void MEM_setup();
+              ^
+               void
+../mem/mem.h(10): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+const uint8_t *MEM_top();
+                      ^
+                       void
+../mem/mem.h(12): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void MEM_pop();
+            ^
+             void
+../mem/mem.h(18): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void MEM_reset();
+              ^
+               void
+../mem/mem.h(20): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void MEM_drop();
+             ^
+              void
+../mem/mem.h(22): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void MEM_print();
+              ^
+               void
+../mem/mem.h(24): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+size_t MEM_size();
+               ^
+                void
+../mem/mem.h(26): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+size_t MEM_idx();
+              ^
+               void
+../mem/mem.c(23): warning: no previous prototype for function 'fram_load' [-Wmissing-prototypes]
+void fram_load() {}
+     ^
+../mem/mem.c(24): warning: no previous prototype for function 'fram_save' [-Wmissing-prototypes]
+void fram_save() {}
+     ^
+../mem/mem.c(25): warning: no previous prototype for function 'fram_erase' [-Wmissing-prototypes]
+void fram_erase() {}
+     ^
+../mem/mem.c(28): warning: no previous prototype for function 'MEM_setup' [-Wmissing-prototypes]
+void MEM_setup() {
+     ^
+../mem/mem.h(8): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void MEM_setup();
+     ^
+               void
+../mem/mem.c(36): warning: no previous prototype for function 'MEM_reset' [-Wmissing-prototypes]
+void MEM_reset() {
+     ^
+../mem/mem.h(18): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void MEM_reset();
+     ^
+               void
+../mem/mem.c(41): warning: code will never be executed [-Wunreachable-code]
+    if(false /**TODO: if needed */) fram_save();
+                                    ^~~~~~~~~
+../mem/mem.c(41): note: silence by adding parentheses to mark code as explicitly dead
+    if(false /**TODO: if needed */) fram_save();
+       ^
+       /* DISABLES CODE */ ( )
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdbool.h(17): note: expanded from macro 'false'
+    #define false 0
+                  ^
+../mem/mem.c(44): warning: no previous prototype for function 'MEM_drop' [-Wmissing-prototypes]
+void MEM_drop() {
+     ^
+../mem/mem.h(20): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void MEM_drop();
+     ^
+              void
+../mem/mem.c(51): warning: no previous prototype for function 'MEM_top' [-Wmissing-prototypes]
+const uint8_t *MEM_top() {
+               ^
+../mem/mem.h(10): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+const uint8_t *MEM_top();
+               ^
+                       void
+../mem/mem.c(55): warning: no previous prototype for function 'MEM_pop' [-Wmissing-prototypes]
+void MEM_pop() {
+     ^
+../mem/mem.h(12): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void MEM_pop();
+     ^
+             void
+../mem/mem.c(74): warning: unused parameter 'addr' [-Wunused-parameter]
+void MEM_remove(const uint8_t addr[8]) {
+                              ^
+../mem/mem.c(81): warning: passing 'char [7]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+    DEBUG("NULL\r\n");
+          ^~~~~~~~~~
+../mem/../global/global.h(16): note: passing argument to parameter 'str' here
+void DEBUG(uint8_t *str);
+                    ^
+../mem/mem.c(79): warning: no previous prototype for function 'MEM_print' [-Wmissing-prototypes]
+void MEM_print() {
+     ^
+../mem/mem.h(22): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void MEM_print();
+     ^
+               void
+../mem/mem.c(84): warning: no previous prototype for function 'MEM_size' [-Wmissing-prototypes]
+size_t MEM_size() {
+       ^
+../mem/mem.h(24): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+size_t MEM_size();
+       ^
+                void
+../mem/mem.c(88): warning: no previous prototype for function 'MEM_idx' [-Wmissing-prototypes]
+size_t MEM_idx() {
+       ^
+../mem/mem.h(26): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+size_t MEM_idx();
+       ^
+               void
+../mem/mem.c(7): warning: no previous extern declaration for non-static variable 'MEM' [-Wmissing-variable-declarations]
+} MEM[MEM_SIZE], *head, *current, *prev;
+  ^
+../mem/mem.c(7): warning: no previous extern declaration for non-static variable 'head' [-Wmissing-variable-declarations]
+} MEM[MEM_SIZE], *head, *current, *prev;
+                  ^
+../mem/mem.c(7): warning: no previous extern declaration for non-static variable 'current' [-Wmissing-variable-declarations]
+} MEM[MEM_SIZE], *head, *current, *prev;
+                         ^
+../mem/mem.c(7): warning: no previous extern declaration for non-static variable 'prev' [-Wmissing-variable-declarations]
+} MEM[MEM_SIZE], *head, *current, *prev;
+                                   ^
+../mem/mem.c(9): warning: no previous extern declaration for non-static variable 'size' [-Wmissing-variable-declarations]
+size_t size;
+       ^
+../mem/mem.c(10): warning: no previous extern declaration for non-static variable 'idx' [-Wmissing-variable-declarations]
+size_t idx;
+       ^
+30 warnings generated.
+compiling mem.c...
+../lcd/lcd.c(1): warning: In file included from...
+../lcd/lcd.h(1): warning: In file included from...
+../lcd/../global/global.h(11): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void global_setup();
+                 ^
+                  void
+../lcd/../global/global.h(20): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void DEBUG_halt();
+               ^
+                void
+../lcd/lcd.c(1): warning: In file included from...
+../lcd/lcd.h(21): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void LCD_setup();
+              ^
+               void
+../lcd/lcd.h(31): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void OnMockDestroyWindow();
+                        ^
+                         void
+../lcd/lcd.c(4): warning: In file included from...
+../lcd/../embedded_libraries/Open1768_LCD.h(10): warning: In file included from...
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(200): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(204): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(198): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(214): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(218): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(212): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(227): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(231): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(225): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(240): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(244): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(238): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(253): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(257): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(251): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(339): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(345): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(349): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(370): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(376): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(380): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(829): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(839): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(843): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+../lcd/lcd.c(13): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+    entry_data = (entry_data & (0xFF00 | 0b11000111)) | 5 << 3;  // AM << 3 | ID << (3+1);
+                                         ^
+../lcd/lcd.c(7): warning: no previous prototype for function 'LCD_setup' [-Wmissing-prototypes]
+void LCD_setup() {
+     ^
+../lcd/lcd.h(21): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void LCD_setup();
+     ^
+               void
+../lcd/lcd.c(26): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wconversion]
+    lcdWriteReg(ADRX_RAM, 239 - y);
+    ~~~~~~~~~~~           ~~~~^~~
+../lcd/lcd.c(27): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wconversion]
+    lcdWriteReg(ADRY_RAM, x);
+    ~~~~~~~~~~~           ^
+../lcd/lcd.c(33): warning: unused parameter 'color' [-Wunused-parameter]
+void LCD_Char(int x, int y, char c, int color) {
+                                        ^
+../lcd/lcd.c(69): warning: passing 'char [21]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        while(1) DEBUG("invalid line coords ");
+                       ^~~~~~~~~~~~~~~~~~~~~~
+../lcd/../global/global.h(16): note: passing argument to parameter 'str' here
+void DEBUG(uint8_t *str);
+                    ^
+34 warnings generated.
+compiling lcd.c...
+../main.c(1): warning: In file included from...
+../lcd/lcd.h(1): warning: In file included from...
+../lcd/../global/global.h(11): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void global_setup();
+                 ^
+                  void
+../lcd/../global/global.h(20): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void DEBUG_halt();
+               ^
+                void
+../main.c(1): warning: In file included from...
+../lcd/lcd.h(21): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void LCD_setup();
+              ^
+               void
+../lcd/lcd.h(31): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void OnMockDestroyWindow();
+                        ^
+                         void
+../main.c(2): warning: In file included from...
+../ds18b20/onewire_DS18B20.h(6): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+bool onewire_reset();  // true = good
+                  ^
+                   void
+../ds18b20/onewire_DS18B20.h(10): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+uint8_t onewire_read();
+                    ^
+                     void
+../ds18b20/onewire_DS18B20.h(12): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void onewire_skip();
+                 ^
+                  void
+../ds18b20/onewire_DS18B20.h(14): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void onewire_setup();
+                  ^
+                   void
+../ds18b20/onewire_DS18B20.h(16): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void onewire_reset_search();
+                         ^
+                          void
+../ds18b20/onewire_DS18B20.h(23): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void onewire_DS18B20_setup();
+                          ^
+                           void
+../ds18b20/onewire_DS18B20.h(24): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void onewire_DS18B20_cleanup();
+                            ^
+                             void
+../ds18b20/onewire_DS18B20.h(29): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+uint8_t onewire_DS18B20_get_bits_resolution();
+                                           ^
+                                            void
+../ds18b20/onewire_DS18B20.h(30): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+uint8_t *onewire_DS18B20_get_precision();
+                                      ^
+                                       void
+../ds18b20/onewire_DS18B20.h(31): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+float onewire_DS18B20_get_celsius();
+                                 ^
+                                  void
+../ds18b20/onewire_DS18B20.h(32): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+float onewire_DS18B20_get_fahrenheit();
+                                    ^
+                                     void
+../main.c(3): warning: In file included from...
+../mem/mem.h(8): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void MEM_setup();
+              ^
+               void
+../mem/mem.h(10): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+const uint8_t *MEM_top();
+                      ^
+                       void
+../mem/mem.h(12): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void MEM_pop();
+            ^
+             void
+../mem/mem.h(18): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void MEM_reset();
+              ^
+               void
+../mem/mem.h(20): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void MEM_drop();
+             ^
+              void
+../mem/mem.h(22): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void MEM_print();
+              ^
+               void
+../mem/mem.h(24): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+size_t MEM_size();
+               ^
+                void
+../mem/mem.h(26): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+size_t MEM_idx();
+              ^
+               void
+../main.c(5): warning: no previous prototype for function 'OnMockDestroyWindow' [-Wmissing-prototypes]
+void OnMockDestroyWindow() {
+     ^
+../lcd/lcd.h(31): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void OnMockDestroyWindow();
+     ^
+                         void
+../main.c(17): warning: passing 'char [9]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+    DEBUG("SEARCH: ");
+          ^~~~~~~~~~
+../mem/../global/global.h(16): note: passing argument to parameter 'str' here
+void DEBUG(uint8_t *str);
+                    ^
+../main.c(19): warning: passing 'char [8]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        DEBUG("RESET\r\n");
+              ^~~~~~~~~~~
+../mem/../global/global.h(16): note: passing argument to parameter 'str' here
+void DEBUG(uint8_t *str);
+                    ^
+../main.c(24): warning: passing 'char [15]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        DEBUG("ADDR CRC ERR\r\n");
+              ^~~~~~~~~~~~~~~~~~
+../mem/../global/global.h(16): note: passing argument to parameter 'str' here
+void DEBUG(uint8_t *str);
+                    ^
+../main.c(30): warning: passing 'char [11]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        DEBUG(" BUS ERR\r\n");
+              ^~~~~~~~~~~~~~
+../mem/../global/global.h(16): note: passing argument to parameter 'str' here
+void DEBUG(uint8_t *str);
+                    ^
+../main.c(36): warning: passing 'char [11]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+            DEBUG(" BUS ERR\r\n");
+                  ^~~~~~~~~~~~~~
+../mem/../global/global.h(16): note: passing argument to parameter 'str' here
+void DEBUG(uint8_t *str);
+                    ^
+../main.c(39): warning: passing 'char [16]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        DEBUG(" DATA CRC ERR\r\n");
+              ^~~~~~~~~~~~~~~~~~~
+../mem/../global/global.h(16): note: passing argument to parameter 'str' here
+void DEBUG(uint8_t *str);
+                    ^
+../main.c(42): warning: passing 'char [7]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+    DEBUG(" GOOD(");
+          ^~~~~~~~
+../mem/../global/global.h(16): note: passing argument to parameter 'str' here
+void DEBUG(uint8_t *str);
+                    ^
+../main.c(43): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+    DEBUG_float(onewire_DS18B20_get_celsius());
+    ~~~~~~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../main.c(44): warning: passing 'char [2]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+    DEBUG("_");
+          ^~~
+../mem/../global/global.h(16): note: passing argument to parameter 'str' here
+void DEBUG(uint8_t *str);
+                    ^
+../main.c(46): warning: passing 'char [4]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+    DEBUG(")\r\n");
+          ^~~~~~~
+../mem/../global/global.h(16): note: passing argument to parameter 'str' here
+void DEBUG(uint8_t *str);
+                    ^
+../main.c(16): warning: no previous prototype for function 'gather_device' [-Wmissing-prototypes]
+searchstate gather_device(uint8_t addr[8]) {
+            ^
+../main.c(65): warning: passing 'char [11]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+    DEBUG("CMP: ADDR=");
+          ^~~~~~~~~~~~
+../mem/../global/global.h(16): note: passing argument to parameter 'str' here
+void DEBUG(uint8_t *str);
+                    ^
+../main.c(67): warning: passing 'char [6]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+    DEBUG(" MEM=");
+          ^~~~~~~
+../mem/../global/global.h(16): note: passing argument to parameter 'str' here
+void DEBUG(uint8_t *str);
+                    ^
+../main.c(69): warning: passing 'char [6]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+    DEBUG(" CMP=");
+          ^~~~~~~
+../mem/../global/global.h(16): note: passing argument to parameter 'str' here
+void DEBUG(uint8_t *str);
+                    ^
+../main.c(71): warning: passing 'char [3]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+    DEBUG("\r\n");
+          ^~~~~~
+../mem/../global/global.h(16): note: passing argument to parameter 'str' here
+void DEBUG(uint8_t *str);
+                    ^
+../main.c(50): warning: no previous prototype for function 'MEM_cmp' [-Wmissing-prototypes]
+int MEM_cmp(const uint8_t addr[8]) {
+    ^
+../main.c(77): warning: passing 'char [7]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+    DEBUG("FEED: ");
+          ^~~~~~~~
+../mem/../global/global.h(16): note: passing argument to parameter 'str' here
+void DEBUG(uint8_t *str);
+                    ^
+../main.c(79): warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+    LCD_Addr(0, ui_line * 12, MEM_top(), LCDWhite);
+    ~~~~~~~~    ~~~~~~~~^~~~
+../main.c(82): warning: passing 'char [16]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+            DEBUG(" ADDR CRC ERR\r\n");
+                  ^~~~~~~~~~~~~~~~~~~
+../mem/../global/global.h(16): note: passing argument to parameter 'str' here
+void DEBUG(uint8_t *str);
+                    ^
+../main.c(83): warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+            LCD_Text(20 * 8, ui_line * 12, "ADDR CRC ERR", LCDWhite);
+            ~~~~~~~~         ~~~~~~~~^~~~
+../main.c(86): warning: passing 'char [11]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+            DEBUG(" BUS ERR\r\n");
+                  ^~~~~~~~~~~~~~
+../mem/../global/global.h(16): note: passing argument to parameter 'str' here
+void DEBUG(uint8_t *str);
+                    ^
+../main.c(87): warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+            LCD_Text(20 * 8, ui_line * 12, "BUS ERR", LCDWhite);
+            ~~~~~~~~         ~~~~~~~~^~~~
+../main.c(90): warning: passing 'char [16]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+            DEBUG(" DATA CRC ERR\r\n");
+                  ^~~~~~~~~~~~~~~~~~~
+../mem/../global/global.h(16): note: passing argument to parameter 'str' here
+void DEBUG(uint8_t *str);
+                    ^
+../main.c(91): warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+            LCD_Text(20 * 8, ui_line * 12, "DATA CRC ERR", LCDWhite);
+            ~~~~~~~~         ~~~~~~~~^~~~
+../main.c(94): warning: passing 'char [11]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+            DEBUG(" MISSING\r\n");
+                  ^~~~~~~~~~~~~~
+../mem/../global/global.h(16): note: passing argument to parameter 'str' here
+void DEBUG(uint8_t *str);
+                    ^
+../main.c(95): warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+            LCD_Text(20 * 8, ui_line * 12, "MISSING", LCDWhite);
+            ~~~~~~~~         ~~~~~~~~^~~~
+../main.c(98): warning: passing 'char [8]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+            DEBUG(" GOOD\r\n");
+                  ^~~~~~~~~~~
+../mem/../global/global.h(16): note: passing argument to parameter 'str' here
+void DEBUG(uint8_t *str);
+                    ^
+../main.c(100): warning: passing 'uint8_t [10]' to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+            sprintf(buf, "%6.2f", onewire_DS18B20_get_celsius());
+                    ^~~
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(417): note: passing argument to parameter here
+extern _ARMABI int sprintf(char * __restrict /*s*/, const char * __restrict /*format*/, ...) __attribute__((__nonnull__(1,2)));
+                                                  ^
+../main.c(100): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+            sprintf(buf, "%6.2f", onewire_DS18B20_get_celsius());
+            ~~~~~~~               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../main.c(101): warning: passing 'uint8_t [10]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+            LCD_Text(20 * 8, ui_line * 12, buf, LCDWhite);
+                                           ^~~
+../lcd/lcd.h(28): note: passing argument to parameter 's' here
+void LCD_Text(int x, int y, const char *s, int color);
+                                        ^
+../main.c(101): warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+            LCD_Text(20 * 8, ui_line * 12, buf, LCDWhite);
+            ~~~~~~~~         ~~~~~~~~^~~~
+../main.c(102): warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+            LCD_Char(20 * 8 + 8 * 6, ui_line * 12, '\x7f', LCDWhite);
+            ~~~~~~~~                 ~~~~~~~~^~~~
+../main.c(103): warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+            LCD_Char(20 * 8 + 8 * 6 + 7, ui_line * 12, 'C', LCDWhite);
+            ~~~~~~~~                     ~~~~~~~~^~~~
+../main.c(80): warning: enumeration value 'SEARCH_RESET' not handled in switch [-Wswitch]
+    switch(state) {
+           ^
+../main.c(76): warning: no previous prototype for function 'feed_ui' [-Wmissing-prototypes]
+void feed_ui(searchstate state) {
+     ^
+../main.c(121): warning: declaration shadows a local variable [-Wshadow]
+    for(int j = 0; j < LCD_SCREEN_HEIGHT; j++) {
+            ^
+../main.c(120): note: previous declaration is here
+    int j = 0;
+        ^
+../main.c(142): warning: passing 'char [6]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+            DEBUG("PUSH ");
+                  ^~~~~~~
+../mem/../global/global.h(16): note: passing argument to parameter 'str' here
+void DEBUG(uint8_t *str);
+                    ^
+../main.c(144): warning: passing 'char [3]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+            DEBUG("\r\n");
+                  ^~~~~~
+../mem/../global/global.h(16): note: passing argument to parameter 'str' here
+void DEBUG(uint8_t *str);
+                    ^
+../main.c(152): warning: passing 'char [7]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+            DEBUG("RESET ");
+                  ^~~~~~~~
+../mem/../global/global.h(16): note: passing argument to parameter 'str' here
+void DEBUG(uint8_t *str);
+                    ^
+../main.c(155): warning: passing 'char [2]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+            DEBUG(" ");
+                  ^~~
+../mem/../global/global.h(16): note: passing argument to parameter 'str' here
+void DEBUG(uint8_t *str);
+                    ^
+../main.c(157): warning: passing 'char [3]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+            DEBUG("\r\n");
+                  ^~~~~~
+../mem/../global/global.h(16): note: passing argument to parameter 'str' here
+void DEBUG(uint8_t *str);
+                    ^
+../main.c(120): warning: unused variable 'j' [-Wunused-variable]
+    int j = 0;
+        ^
+../main.c(75): warning: no previous extern declaration for non-static variable 'ui_line' [-Wmissing-variable-declarations]
+size_t ui_line;
+       ^
+67 warnings generated.
+compiling main.c...
+../global/global_mock.c(44): warning: ISO C requires a translation unit to contain at least one declaration [-Wempty-translation-unit]
+#endif
+      ^
+1 warning generated.
+compiling global_mock.c...
+../global/global_embed.c(1): warning: In file included from...
+../global/global.h(11): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void global_setup();
+                 ^
+                  void
+../global/global.h(20): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void DEBUG_halt();
+               ^
+                void
+../global/global_embed.c(3): warning: In file included from...
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/RTE_Driver\GPIO_LPC17xx.h(30): warning: In file included from...
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(200): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(204): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(198): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(214): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(218): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(212): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(227): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(231): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(225): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(240): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(244): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(238): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(253): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(257): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(251): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(339): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(345): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(349): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(370): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(376): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(380): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(829): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(839): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(843): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+../global/global_embed.c(9): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+    UART->LCR = (UART->LCR & 0xFFFFFF00) | 0b10000111;
+                                           ^
+../global/global_embed.c(3): warning: In file included from...
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/RTE_Driver\GPIO_LPC17xx.h(30): warning: In file included from...
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(337): warning: padding size of 'LPC_UART_TypeDef' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+../global/global_embed.c(11): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+    UART->LCR = (UART->LCR & 0xFFFFFF00) | 0b00000111;
+                                           ^
+../global/global_embed.c(6): warning: no previous prototype for function 'UART0_Init' [-Wmissing-prototypes]
+void UART0_Init() {
+     ^
+../global/global_embed.c(13): warning: no previous prototype for function 'UART_Char_Send' [-Wmissing-prototypes]
+void UART_Char_Send(uint8_t c) {
+     ^
+../global/global_embed.c(17): warning: no previous prototype for function 'UART_Send' [-Wmissing-prototypes]
+void UART_Send(const uint8_t *str) {
+     ^
+../global/global_embed.c(21): warning: no previous prototype for function 'global_setup' [-Wmissing-prototypes]
+void global_setup() {
+     ^
+../global/global.h(11): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void global_setup();
+     ^
+                  void
+../global/global_embed.c(26): warning: no previous extern declaration for non-static variable 'usTicks' [-Wmissing-variable-declarations]
+volatile int usTicks = 0;
+             ^
+../global/global_embed.c(27): warning: no previous prototype for function 'SysTick_Handler' [-Wmissing-prototypes]
+void SysTick_Handler(void) {
+     ^
+../global/global_embed.c(45): warning: passing 'char [5]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        DEBUG("NULL");
+              ^~~~~~
+../global/global_embed.c(40): note: passing argument to parameter 'str' here
+void DEBUG(uint8_t *str) {
+                    ^
+../global/global_embed.c(49): warning: passing 'uint8_t [24]' to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+    snprintf(buf, 24, "%02X:%02X:%02X:%02X:%02X:%02X:%02X:%02X", addr[0], addr[1], addr[2], addr[3], addr[4], addr[5], addr[6],
+             ^~~
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(440): note: passing argument to parameter here
+extern _ARMABI int snprintf(char * __restrict /*s*/, size_t /*n*/,
+                                                   ^
+../global/global_embed.c(55): warning: passing 'uint8_t [12]' to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+    snprintf(buf, 12, "%d", x);
+             ^~~
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(440): note: passing argument to parameter here
+extern _ARMABI int snprintf(char * __restrict /*s*/, size_t /*n*/,
+                                                   ^
+../global/global_embed.c(60): warning: passing 'uint8_t [24]' to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+    snprintf(buf, 24, "%f", x);
+             ^~~
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(440): note: passing argument to parameter here
+extern _ARMABI int snprintf(char * __restrict /*s*/, size_t /*n*/,
+                                                   ^
+../global/global_embed.c(63): warning: no previous prototype for function 'DEBUG_halt' [-Wmissing-prototypes]
+void DEBUG_halt() {
+     ^
+../global/global.h(20): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void DEBUG_halt();
+     ^
+                void
+../global/global_embed.c(63): warning: function 'DEBUG_halt' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+void DEBUG_halt() {
+                  ^
+41 warnings generated.
+compiling global_embed.c...
+../ds18b20/onewire_DS18B20.c(1): warning: In file included from...
+../ds18b20/onewire_DS18B20.h(1): warning: In file included from...
+../ds18b20/../global/global.h(11): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void global_setup();
+                 ^
+                  void
+../ds18b20/../global/global.h(20): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void DEBUG_halt();
+               ^
+                void
+../ds18b20/onewire_DS18B20.c(1): warning: In file included from...
+../ds18b20/onewire_DS18B20.h(6): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+bool onewire_reset();  // true = good
+                  ^
+                   void
+../ds18b20/onewire_DS18B20.h(10): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+uint8_t onewire_read();
+                    ^
+                     void
+../ds18b20/onewire_DS18B20.h(12): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void onewire_skip();
+                 ^
+                  void
+../ds18b20/onewire_DS18B20.h(14): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void onewire_setup();
+                  ^
+                   void
+../ds18b20/onewire_DS18B20.h(16): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void onewire_reset_search();
+                         ^
+                          void
+../ds18b20/onewire_DS18B20.h(23): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void onewire_DS18B20_setup();
+                          ^
+                           void
+../ds18b20/onewire_DS18B20.h(24): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void onewire_DS18B20_cleanup();
+                            ^
+                             void
+../ds18b20/onewire_DS18B20.h(29): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+uint8_t onewire_DS18B20_get_bits_resolution();
+                                           ^
+                                            void
+../ds18b20/onewire_DS18B20.h(30): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+uint8_t *onewire_DS18B20_get_precision();
+                                      ^
+                                       void
+../ds18b20/onewire_DS18B20.h(31): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+float onewire_DS18B20_get_celsius();
+                                 ^
+                                  void
+../ds18b20/onewire_DS18B20.h(32): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+float onewire_DS18B20_get_fahrenheit();
+                                    ^
+                                     void
+../ds18b20/onewire_DS18B20.c(5): warning: In file included from...
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/RTE_Driver\GPIO_LPC17xx.h(30): warning: In file included from...
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(200): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(204): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(198): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(214): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(218): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(212): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(227): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(231): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(225): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(240): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(244): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(238): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(253): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(257): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(251): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(339): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(345): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(349): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(370): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(376): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(380): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(829): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(839): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(843): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+../ds18b20/onewire_DS18B20.c(19): warning: no previous prototype for function 'noInterrupts' [-Wmissing-prototypes]
+void noInterrupts() {}
+     ^
+../ds18b20/onewire_DS18B20.c(20): warning: no previous prototype for function 'interrupts' [-Wmissing-prototypes]
+void interrupts() {}
+     ^
+../ds18b20/onewire_DS18B20.c(22): warning: no previous prototype for function 'onewire_setup' [-Wmissing-prototypes]
+void onewire_setup() {
+     ^
+../ds18b20/onewire_DS18B20.h(14): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void onewire_setup();
+     ^
+                   void
+../ds18b20/onewire_DS18B20.c(27): warning: no previous prototype for function 'onewire_reset' [-Wmissing-prototypes]
+bool onewire_reset() {  // true - good
+     ^
+../ds18b20/onewire_DS18B20.h(6): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+bool onewire_reset();  // true = good
+     ^
+                   void
+../ds18b20/onewire_DS18B20.c(66): warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wconversion]
+    uint8_t bit = GPIO_PinRead(OW_PORT, OW_PIN);
+            ~~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../ds18b20/onewire_DS18B20.c(79): warning: no previous prototype for function 'onewire_read' [-Wmissing-prototypes]
+uint8_t onewire_read() {
+        ^
+../ds18b20/onewire_DS18B20.h(10): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+uint8_t onewire_read();
+        ^
+                     void
+../ds18b20/onewire_DS18B20.c(92): warning: no previous prototype for function 'onewire_skip' [-Wmissing-prototypes]
+void onewire_skip() {
+     ^
+../ds18b20/onewire_DS18B20.h(12): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void onewire_skip();
+     ^
+                  void
+../ds18b20/onewire_DS18B20.c(96): warning: no previous prototype for function 'onewire_reset_search' [-Wmissing-prototypes]
+void onewire_reset_search() {
+     ^
+../ds18b20/onewire_DS18B20.h(16): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void onewire_reset_search();
+     ^
+                          void
+../ds18b20/onewire_DS18B20.c(280): warning: no previous prototype for function 'onewire_DS18B20_setup' [-Wmissing-prototypes]
+void onewire_DS18B20_setup() {
+     ^
+../ds18b20/onewire_DS18B20.h(23): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void onewire_DS18B20_setup();
+     ^
+                           void
+../ds18b20/onewire_DS18B20.c(307): warning: no previous prototype for function 'onewire_DS18B20_cleanup' [-Wmissing-prototypes]
+void onewire_DS18B20_cleanup() {}
+     ^
+../ds18b20/onewire_DS18B20.h(24): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void onewire_DS18B20_cleanup();
+     ^
+                             void
+../ds18b20/onewire_DS18B20.c(310): warning: no previous prototype for function 'onewire_DS18B20_get_bits_resolution' [-Wmissing-prototypes]
+uint8_t onewire_DS18B20_get_bits_resolution() {
+        ^
+../ds18b20/onewire_DS18B20.h(29): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+uint8_t onewire_DS18B20_get_bits_resolution();
+        ^
+                                            void
+../ds18b20/onewire_DS18B20.c(320): warning: no previous extern declaration for non-static variable 'presisions' [-Wmissing-variable-declarations]
+uint8_t presisions[4][8] = {"0.25", "0.125", "0.0625", "0.03125"};
+        ^
+../ds18b20/onewire_DS18B20.c(322): warning: no previous prototype for function 'onewire_DS18B20_get_precision' [-Wmissing-prototypes]
+uint8_t *onewire_DS18B20_get_precision() {
+         ^
+../ds18b20/onewire_DS18B20.h(30): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+uint8_t *onewire_DS18B20_get_precision();
+         ^
+                                       void
+../ds18b20/onewire_DS18B20.c(332): warning: implicit conversion loses integer precision: 'int' to 'int16_t' (aka 'short') [-Wconversion]
+    int16_t DS18B20__raw = (DS18B20__data[1] << 8) | DS18B20__data[0];
+            ~~~~~~~~~~~~   ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+../ds18b20/onewire_DS18B20.c(336): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+        case 9: DS18B20__raw = (DS18B20__raw & ~0b111) | 0b100; break;  // ± 0.25000 ℃, 93.75 ms
+                                                ^
+../ds18b20/onewire_DS18B20.c(336): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+        case 9: DS18B20__raw = (DS18B20__raw & ~0b111) | 0b100; break;  // ± 0.25000 ℃, 93.75 ms
+                                                         ^
+../ds18b20/onewire_DS18B20.c(337): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+        case 10: DS18B20__raw = (DS18B20__raw & ~0b11) | 0b10; break;   // ± 0.12500 ℃, 187.5 ms
+                                                 ^
+../ds18b20/onewire_DS18B20.c(337): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+        case 10: DS18B20__raw = (DS18B20__raw & ~0b11) | 0b10; break;   // ± 0.12500 ℃, 187.5 ms
+                                                         ^
+../ds18b20/onewire_DS18B20.c(338): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+        case 11: DS18B20__raw = DS18B20__raw & ~0b1; break;             // ± 0.06250 ℃, 375 ms
+                                                ^
+../ds18b20/onewire_DS18B20.c(341): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wconversion]
+    return (float)DS18B20__raw * 0.0625;
+    ~~~~~~ ~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+../ds18b20/onewire_DS18B20.c(341): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+    return (float)DS18B20__raw * 0.0625;
+           ^~~~~~~~~~~~~~~~~~~ ~
+../ds18b20/onewire_DS18B20.c(331): warning: no previous prototype for function 'onewire_DS18B20_get_celsius' [-Wmissing-prototypes]
+float onewire_DS18B20_get_celsius() {
+      ^
+../ds18b20/onewire_DS18B20.h(31): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+float onewire_DS18B20_get_celsius();
+      ^
+                                  void
+../ds18b20/onewire_DS18B20.c(345): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wconversion]
+    return onewire_DS18B20_get_celsius() * 1.8 + 32.0;
+    ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+../ds18b20/onewire_DS18B20.c(345): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+    return onewire_DS18B20_get_celsius() * 1.8 + 32.0;
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~
+../ds18b20/onewire_DS18B20.c(344): warning: no previous prototype for function 'onewire_DS18B20_get_fahrenheit' [-Wmissing-prototypes]
+float onewire_DS18B20_get_fahrenheit() {
+      ^
+../ds18b20/onewire_DS18B20.h(32): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+float onewire_DS18B20_get_fahrenheit();
+      ^
+                                     void
+../ds18b20/onewire_DS18B20.c(14): warning: no previous extern declaration for non-static variable 'ROM_NO' [-Wmissing-variable-declarations]
+uint8_t ROM_NO[8];
+        ^
+../ds18b20/onewire_DS18B20.c(15): warning: no previous extern declaration for non-static variable 'LastDiscrepancy' [-Wmissing-variable-declarations]
+uint8_t LastDiscrepancy;
+        ^
+../ds18b20/onewire_DS18B20.c(16): warning: no previous extern declaration for non-static variable 'LastFamilyDiscrepancy' [-Wmissing-variable-declarations]
+uint8_t LastFamilyDiscrepancy;
+        ^
+../ds18b20/onewire_DS18B20.c(17): warning: no previous extern declaration for non-static variable 'LastDeviceFlag' [-Wmissing-variable-declarations]
+bool LastDeviceFlag;
+     ^
+66 warnings generated.
+compiling onewire_DS18B20.c...
+../ds18b20/onewire_DS18B20_mock.c(145): warning: ISO C requires a translation unit to contain at least one declaration [-Wempty-translation-unit]
+#endif
+      ^
+1 warning generated.
+compiling onewire_DS18B20_mock.c...
+../embedded_libraries/LCD_ILI9325.c(2): warning: In file included from...
+../embedded_libraries/Open1768_LCD.h(10): warning: In file included from...
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(200): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(204): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(198): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(214): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(218): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(212): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(227): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(231): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(225): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(240): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(244): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(238): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(253): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(257): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(251): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(339): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(345): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(349): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(370): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(376): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(380): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(829): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(839): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(843): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+../embedded_libraries/LCD_ILI9325.c(6): warning: no previous prototype for function 'lcd_delay_ms' [-Wmissing-prototypes]
+void lcd_delay_ms(uint16_t ms)
+     ^
+25 warnings generated.
+compiling LCD_ILI9325.c...
+../embedded_libraries/Open1768_LCD.c(22): warning: In file included from...
+../embedded_libraries/Open1768_LCD.h(10): warning: In file included from...
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(200): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(204): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(198): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(214): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(218): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(212): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(227): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(231): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(225): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(240): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(244): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(238): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(253): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(257): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(251): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(339): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(345): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(349): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(370): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(376): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(380): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(829): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(839): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(843): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+../embedded_libraries/Open1768_LCD.c(27): warning: 'LCD_ILI9325' is not defined, evaluates to 0 [-Wundef]
+#elif  LCD_ILI9325
+       ^
+../embedded_libraries/Open1768_LCD.c(92): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+   volatile unsigned int tmp = count;
+                         ~~~   ^~~~~
+../embedded_libraries/Open1768_LCD.c(107): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+   LPC_GPIO2->FIODIR &= ~(0xFF);         /* P2.0...P2.7 Input */
+                     ~~ ^~~~~~~
+../embedded_libraries/Open1768_LCD.c(117): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wconversion]
+   return  (valMSB << 8 | valLSB);
+   ~~~~~~   ~~~~~~~~~~~~^~~~~~~~
+../embedded_libraries/Open1768_LCD.c(247): warning: 'DISP_ORIENTATION' is not defined, evaluates to 0 [-Wundef]
+    #if  ( DISP_ORIENTATION == 90 ) || ( DISP_ORIENTATION == 270 )
+           ^
+../embedded_libraries/Open1768_LCD.c(247): warning: 'DISP_ORIENTATION' is not defined, evaluates to 0 [-Wundef]
+    #if  ( DISP_ORIENTATION == 90 ) || ( DISP_ORIENTATION == 270 )
+                                         ^
+../embedded_libraries/Open1768_LCD.c(254): warning: 'DISP_ORIENTATION' is not defined, evaluates to 0 [-Wundef]
+   #elif  ( DISP_ORIENTATION == 0 ) || ( DISP_ORIENTATION == 180 )
+            ^
+31 warnings generated.
+compiling Open1768_LCD.c...
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Boards/Waveshare/Open1768/Common/LED_Open1768.c(37): warning: In file included from...
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/RTE_Driver\GPIO_LPC17xx.h(30): warning: In file included from...
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(200): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(204): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(198): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(214): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(218): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(212): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(227): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(231): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(225): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(240): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(244): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(238): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(253): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(257): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(251): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(339): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(345): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(349): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(370): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(376): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(380): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(829): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(839): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(843): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+24 warnings generated.
+compiling LED_Open1768.c...
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/RTE_Driver/PIN_LPC17xx.c(26): warning: In file included from...
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(200): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(204): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(198): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(214): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(218): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(212): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(227): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(231): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(225): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(240): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(244): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(238): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(253): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(257): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(251): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(339): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(345): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(349): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(370): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(376): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(380): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(829): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(839): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(843): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+24 warnings generated.
+compiling PIN_LPC17xx.c...
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/RTE_Driver/GPIO_LPC17xx.c(26): warning: In file included from...
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/RTE_Driver/GPIO_LPC17xx.h(30): warning: In file included from...
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(200): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(204): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(198): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(214): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(218): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(212): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(227): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(231): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(225): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(240): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(244): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(238): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(253): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(257): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(251): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(339): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(345): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(349): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(370): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(376): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(380): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(829): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(839): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(843): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+24 warnings generated.
+compiling GPIO_LPC17xx.c...
+assembling startup_LPC17xx.s...
+RTE/Device/LPC1768/system_LPC17xx.c(36): warning: In file included from...
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(200): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(204): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(198): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(214): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(218): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(212): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(227): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(231): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(225): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(240): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(244): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(238): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(253): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(257): warning: anonymous structs are a C11 extension [-Wc11-extensions]
+    struct {
+    ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(251): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(339): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(345): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(349): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(370): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(376): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(380): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(829): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(839): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include\LPC17xx.h(843): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+RTE/Device/LPC1768/system_LPC17xx.c(539): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  LPC_SC->FLASHCFG  = (LPC_SC->FLASHCFG & ~0x0000F000) | FLASHCFG_Val;
+                                        ~ ^~~~~~~~~~~
+25 warnings generated.
+compiling system_LPC17xx.c...
+linking...
+Program Size: Code=15940 RO-data=2620 RW-data=40 ZI-data=3736  
+".\Objects\uv_mock_test.axf" - 0 Error(s), 394 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.5.1.pack
+                ARM.CMSIS.5.5.1
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.2.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.LPC1700_DFP.2.6.1.pack
+                Keil.LPC1700_DFP.2.6.1
+                NXP LPC1700 Series Device Support, Drivers and Examples for MCB1700, Open1768 and LPC1788-32
+   * Component: LED Version: 1.0.0
+   * Component: GPIO Version: 1.1.0
+   * Component: PIN Version: 1.0.0
+   * Component: Startup Version: 1.0.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.MDK-Middleware.7.8.0.pack
+                Keil.MDK-Middleware.7.8.0
+                Middleware for Keil MDK-Professional and MDK-Plus
+   * Component: LED Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\Device\LPC1768
+  .\RTE\_Target_1
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include
+  C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include
+  C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver
+  C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.8.0\Board
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ::Board Support:LED:1.0.0 (API)
+      Include file:  Board\Board_LED.h
+
+   * Component: ARM::CMSIS:CORE:5.2.0
+
+   * Component: Keil.Open1768::Board Support:LED:1.0.0
+      Source file:   Boards\Waveshare\Open1768\Common\LED_Open1768.c
+
+   * Component: Keil::Device:GPIO:1.1.0
+      Source file:   RTE_Driver\GPIO_LPC17xx.c
+      Include file:  RTE_Driver\GPIO_LPC17xx.h
+
+   * Component: Keil::Device:PIN:1.0.0
+      Include file:  RTE_Driver\PIN_LPC17xx.h
+      Source file:   RTE_Driver\PIN_LPC17xx.c
+
+   * Component: Keil::Device:Startup:1.0.0
+      Include file:  Device\Include\LPC17xx.h
+      Source file:   Device\Source\ARM\startup_LPC17xx.s
+      Source file:   Device\Source\system_LPC17xx.c
+      Include file:  RTE_Driver\Config\RTE_Device.h
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>

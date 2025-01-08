@@ -73,10 +73,14 @@ int MEM_cmp(const uint8_t addr[8]) {
 }
 
 size_t ui_line;
-void feed_ui(searchstate state) {
+void feed_ui(int state) {
     DEBUG("FEED: ");
-    DEBUG_addr(MEM_top());
+    //DEBUG_addr(MEM_top());
     LCD_Addr(0, ui_line * 12, MEM_top(), LCDWhite);
+		DEBUG_int(state);
+		DEBUG_int(SEARCH_GOOD);
+		DEBUG_int(state-SEARCH_GOOD);
+		DEBUG_int(state==SEARCH_GOOD);
     switch(state) {
         case SEARCH_ADDR_CRC_ERR:
             DEBUG(" ADDR CRC ERR\r\n");
@@ -102,6 +106,10 @@ void feed_ui(searchstate state) {
             LCD_Char(20 * 8 + 8 * 6, ui_line * 12, '\x7f', LCDWhite);
             LCD_Char(20 * 8 + 8 * 6 + 7, ui_line * 12, 'C', LCDWhite);
             break;
+				default:
+            DEBUG("unreachable!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+						DEBUG_int(state);
+            DEBUG("\r\n");
     }
     ui_line++;
 }
@@ -129,7 +137,8 @@ int main() {
     uint8_t addr_buf[8], *addr = NULL;
     ui_line = 0;
     while(true) {
-        searchstate state = gather_device(addr_buf);
+        int state = gather_device(addr_buf);
+				DEBUG_int(state);
         if(state == SEARCH_ADDR_CRC_ERR) continue;
         addr = state == SEARCH_RESET ? NULL : addr_buf;
         int cmp = MEM_cmp(addr);
@@ -144,6 +153,7 @@ int main() {
             DEBUG("\r\n");
             MEM_push(addr);  // cmp => 0
         }
+				DEBUG_int(state);
         if(MEM_top() != NULL) feed_ui(state);
         MEM_pop();
 
