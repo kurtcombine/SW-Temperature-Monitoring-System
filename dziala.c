@@ -78,41 +78,39 @@ size_t ui_line;
 void feed_ui(int state) {
     DEBUG("FEED: ");
 	
-		int x_offset = 32;
     for(int j = 0; j < 12; j++) {
-        for(int i = x_offset; i < LCD_SCREEN_WIDTH-x_offset; i++) {
-            LCD_Pixel(i, ui_line * 12-2+j + 6, LCDBlue);
+        for(int i = 0; i < LCD_SCREEN_WIDTH; i++) {
+            LCD_Pixel(i, ui_line * 12-2+j, LCDBlue);
         }
     }
-		int X = 20 * 8 + x_offset, Y = ui_line * 12 + 6;
 		if(state == SEARCH_GOOD)
-    LCD_Addr(x_offset, Y, MEM_top(), LCDWhite);
+    LCD_Addr(0, ui_line * 12, MEM_top(), LCDWhite);
 		else
-    LCD_Addr(x_offset, Y, MEM_top(), LCDRed);
+    LCD_Addr(0, ui_line * 12, MEM_top(), LCDRed);
     switch(state) {
         case SEARCH_ADDR_CRC_ERR:
             DEBUG(" ADDR CRC ERR\r\n");
-            LCD_Text(X, Y, "ADDR CRC ERR", LCDWhite);
+            LCD_Text(20 * 8, ui_line * 12, "ADDR CRC ERR", LCDWhite);
             break;
         case SEARCH_BUS_ERR:
             DEBUG(" BUS ERR\r\n");
-            LCD_Text(X, Y, "BUS ERR", LCDWhite);
+            LCD_Text(20 * 8, ui_line * 12, "BUS ERR", LCDWhite);
             break;
         case SEARCH_DATA_CRC_ERR:
             DEBUG(" DATA CRC ERR\r\n");
-            LCD_Text(X, Y, "DATA CRC ERR", LCDWhite);
+            LCD_Text(20 * 8, ui_line * 12, "DATA CRC ERR", LCDWhite);
             break;
         case SEARCH_MISSING:
             DEBUG(" MISSING\r\n");
-            LCD_Text(X, Y, "MISSING", LCDWhite);
+            LCD_Text(20 * 8, ui_line * 12, "MISSING", LCDWhite);
             break;
         case SEARCH_GOOD:
             DEBUG(" GOOD\r\n");
             uint8_t buf[10];
             sprintf(buf, "%6.2f", onewire_DS18B20_get_celsius());
-            LCD_Text(X, Y, buf, LCDWhite);
-            LCD_Char(X + 8 * 6, Y, '\x7f', LCDWhite);
-            LCD_Char(X + 8 * 6 + 7, Y, 'C', LCDWhite);
+            LCD_Text(20 * 8, ui_line * 12, buf, LCDWhite);
+            LCD_Char(20 * 8 + 8 * 6, ui_line * 12, '\x7f', LCDWhite);
+            LCD_Char(20 * 8 + 8 * 6 + 7, ui_line * 12, 'C', LCDWhite);
             break;
 				default:
             DEBUG("unreachable!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
@@ -123,7 +121,6 @@ void feed_ui(int state) {
 }
 
 uint8_t history_fixup[25] = {};
-	  char buf[8];
 
 int main() {
     global_setup();
@@ -131,16 +128,11 @@ int main() {
     onewire_DS18B20_setup();
     LCD_setup();
     MEM_setup();
-    LCD_Background(LCDBlue);
-		int xo = 25;
-		LCD_Line(xo, 3, LCD_SCREEN_WIDTH -xo, 3, LCDWhite);
-		LCD_Line(xo, LCD_SCREEN_HEIGHT-3-12, LCD_SCREEN_WIDTH -xo, LCD_SCREEN_HEIGHT-3-12, LCDWhite);
-		LCD_Line(xo, 3, xo, LCD_SCREEN_HEIGHT-3-12, LCDWhite); 
-		LCD_Line(LCD_SCREEN_WIDTH -xo, 3, LCD_SCREEN_WIDTH -xo, LCD_SCREEN_HEIGHT-3-12, LCDWhite);
 
 #ifdef MOCKED_EMBEDDED
     onewire_DS18B20_setConversionTime(100);
 #endif
+    LCD_Background(LCDBlue);
     uint8_t addr_buf[8], *addr = NULL;
     ui_line = 0;
     while(true) {
@@ -178,17 +170,6 @@ int main() {
             DEBUG(" ");
             DEBUG_addr(MEM_top());
             DEBUG("\r\n");
-					
-					for(int j = 0; j < 12; j++) {
-							for(int i = 0; i < LCD_SCREEN_WIDTH; i++) {
-									LCD_Pixel(i, LCD_SCREEN_HEIGHT-12+j, LCDBlue);
-							}
-					}
-						snprintf(buf, 8, "100/100");
-						strlen(buf);
-						LCD_Text(LCD_SCREEN_WIDTH/2 - 8/2*strlen(buf), LCD_SCREEN_HEIGHT-12-1, buf, LCDWhite);
-						snprintf(buf, 8, "%d", MEM_size());
-						LCD_Text(LCD_SCREEN_WIDTH - 8*strlen(buf)-4, LCD_SCREEN_HEIGHT-12-1, buf, LCDWhite);
             continue;
         }
     }
