@@ -1,0 +1,144 @@
+Dependencies for Project 'proj', Target 'Target_1': (DO NOT MODIFY !)
+F (.\main.c)(0x6787C68B)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Libraries/LCP1768_StdPeriph_Driver/include -I ../Libraries/LCP1768_StdPeriph_Driver/source -I ../../projekt-z-symulacja/global-I./RTE/Device/LPC1768-I./RTE/_Target_1-IC:/Keil_v5/ARM/PACK/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Keil_v5/ARM/PACK/ARM/CMSIS/5.5.1/CMSIS/Driver/Include-IC:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include-IC:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/RTE_Driver-IC:/Keil_v5/ARM/PACK/Keil/MDK-Middleware/7.8.0/Board-D__UVISION_VERSION="527" -D_RTE_ -DLPC175x_6x-o ./objects/main.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x5B73FB70)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver\PIN_LPC17xx.h)(0x5D5BD5BA)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5B73FB70)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5B73FB70)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver\GPIO_LPC17xx.h)(0x5D5BD5BA)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include\LPC17xx.h)(0x58493F92)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B9768A4)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F17E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x59111BE4)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\mpu_armv7.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include\system_LPC17xx.h)(0x58493F92)
+F (..\Libraries\LCP1768_StdPeriph_Driver\source\lpc17xx_clkpwr.c)(0x4E01208D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Libraries/LCP1768_StdPeriph_Driver/include -I ../Libraries/LCP1768_StdPeriph_Driver/source -I ../../projekt-z-symulacja/global-I./RTE/Device/LPC1768-I./RTE/_Target_1-IC:/Keil_v5/ARM/PACK/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Keil_v5/ARM/PACK/ARM/CMSIS/5.5.1/CMSIS/Driver/Include-IC:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include-IC:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/RTE_Driver-IC:/Keil_v5/ARM/PACK/Keil/MDK-Middleware/7.8.0/Board-D__UVISION_VERSION="527" -D_RTE_ -DLPC175x_6x-o ./objects/lpc17xx_clkpwr.o -MD)
+I (..\Libraries\LCP1768_StdPeriph_Driver\include\lpc17xx_clkpwr.h)(0x4E39DCE7)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include\lpc17xx.h)(0x58493F92)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5B73FB70)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B9768A4)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F17E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x59111BE4)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\mpu_armv7.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include\system_LPC17xx.h)(0x58493F92)
+I (..\Libraries\LCP1768_StdPeriph_Driver\include\lpc_types.h)(0x4E01208E)
+F (..\Libraries\LCP1768_StdPeriph_Driver\source\lpc17xx_i2c.c)(0x4E01208C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Libraries/LCP1768_StdPeriph_Driver/include -I ../Libraries/LCP1768_StdPeriph_Driver/source -I ../../projekt-z-symulacja/global-I./RTE/Device/LPC1768-I./RTE/_Target_1-IC:/Keil_v5/ARM/PACK/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Keil_v5/ARM/PACK/ARM/CMSIS/5.5.1/CMSIS/Driver/Include-IC:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include-IC:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/RTE_Driver-IC:/Keil_v5/ARM/PACK/Keil/MDK-Middleware/7.8.0/Board-D__UVISION_VERSION="527" -D_RTE_ -DLPC175x_6x-o ./objects/lpc17xx_i2c.o -MD)
+I (..\Libraries\LCP1768_StdPeriph_Driver\include\lpc17xx_i2c.h)(0x4E39DCE7)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include\LPC17xx.h)(0x58493F92)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5B73FB70)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B9768A4)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F17E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x59111BE4)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\mpu_armv7.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include\system_LPC17xx.h)(0x58493F92)
+I (..\Libraries\LCP1768_StdPeriph_Driver\include\lpc_types.h)(0x4E01208E)
+I (..\Libraries\LCP1768_StdPeriph_Driver\include\lpc17xx_clkpwr.h)(0x4E39DCE7)
+I (..\Libraries\LCP1768_StdPeriph_Driver\include\lpc17xx_pinsel.h)(0x4E39DCE7)
+I (..\Libraries\LCP1768_StdPeriph_Driver\include\lpc17xx_libcfg_default.h)(0x6787C4C5)
+F (..\Libraries\LCP1768_StdPeriph_Driver\source\lpc17xx_pinsel.c)(0x4E01208C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Libraries/LCP1768_StdPeriph_Driver/include -I ../Libraries/LCP1768_StdPeriph_Driver/source -I ../../projekt-z-symulacja/global-I./RTE/Device/LPC1768-I./RTE/_Target_1-IC:/Keil_v5/ARM/PACK/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Keil_v5/ARM/PACK/ARM/CMSIS/5.5.1/CMSIS/Driver/Include-IC:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include-IC:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/RTE_Driver-IC:/Keil_v5/ARM/PACK/Keil/MDK-Middleware/7.8.0/Board-D__UVISION_VERSION="527" -D_RTE_ -DLPC175x_6x-o ./objects/lpc17xx_pinsel.o -MD)
+I (..\Libraries\LCP1768_StdPeriph_Driver\include\lpc17xx_pinsel.h)(0x4E39DCE7)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include\lpc17xx.h)(0x58493F92)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5B73FB70)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B9768A4)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F17E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x59111BE4)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\mpu_armv7.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include\system_LPC17xx.h)(0x58493F92)
+I (..\Libraries\LCP1768_StdPeriph_Driver\include\lpc_types.h)(0x4E01208E)
+F (.\at24xx.h)(0x6787C3D5)()
+F (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Boards\Keil\MCB1700\Common\LED_MCB1700.c)(0x5D5BD5BA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Libraries/LCP1768_StdPeriph_Driver/include -I ../Libraries/LCP1768_StdPeriph_Driver/source -I ../../projekt-z-symulacja/global-I./RTE/Device/LPC1768-I./RTE/_Target_1-IC:/Keil_v5/ARM/PACK/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Keil_v5/ARM/PACK/ARM/CMSIS/5.5.1/CMSIS/Driver/Include-IC:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include-IC:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/RTE_Driver-IC:/Keil_v5/ARM/PACK/Keil/MDK-Middleware/7.8.0/Board-D__UVISION_VERSION="527" -D_RTE_ -DLPC175x_6x-o ./objects/led_mcb1700.o -MD)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver\PIN_LPC17xx.h)(0x5D5BD5BA)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5B73FB70)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5B73FB70)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver\GPIO_LPC17xx.h)(0x5D5BD5BA)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include\LPC17xx.h)(0x58493F92)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B9768A4)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F17E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x59111BE4)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\mpu_armv7.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include\system_LPC17xx.h)(0x58493F92)
+I (C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.8.0\Board\Board_LED.h)(0x5877623C)
+F (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver\I2C_LPC17xx.c)(0x5D5BD5BA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Libraries/LCP1768_StdPeriph_Driver/include -I ../Libraries/LCP1768_StdPeriph_Driver/source -I ../../projekt-z-symulacja/global-I./RTE/Device/LPC1768-I./RTE/_Target_1-IC:/Keil_v5/ARM/PACK/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Keil_v5/ARM/PACK/ARM/CMSIS/5.5.1/CMSIS/Driver/Include-IC:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include-IC:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/RTE_Driver-IC:/Keil_v5/ARM/PACK/Keil/MDK-Middleware/7.8.0/Board-D__UVISION_VERSION="527" -D_RTE_ -DLPC175x_6x-o ./objects/i2c_lpc17xx.o -MD)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver\I2C_LPC17xx.h)(0x5D5BD5BA)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5B73FB70)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include\LPC17xx.h)(0x58493F92)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5B73FB70)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B9768A4)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F17E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x59111BE4)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\mpu_armv7.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include\system_LPC17xx.h)(0x58493F92)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver\PIN_LPC17xx.h)(0x5D5BD5BA)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5B73FB70)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Driver\Include\Driver_I2C.h)(0x5C8A78DC)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Driver\Include\Driver_Common.h)(0x5C8A78DC)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5B73FB70)
+I (RTE\Device\LPC1768\RTE_Device.h)(0x6787C3D9)
+I (RTE\_Target_1\RTE_Components.h)(0x6787C1FA)
+F (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver\GPDMA_LPC17xx.c)(0x5D5BD5BA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Libraries/LCP1768_StdPeriph_Driver/include -I ../Libraries/LCP1768_StdPeriph_Driver/source -I ../../projekt-z-symulacja/global-I./RTE/Device/LPC1768-I./RTE/_Target_1-IC:/Keil_v5/ARM/PACK/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Keil_v5/ARM/PACK/ARM/CMSIS/5.5.1/CMSIS/Driver/Include-IC:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include-IC:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/RTE_Driver-IC:/Keil_v5/ARM/PACK/Keil/MDK-Middleware/7.8.0/Board-D__UVISION_VERSION="527" -D_RTE_ -DLPC175x_6x-o ./objects/gpdma_lpc17xx.o -MD)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver\GPDMA_LPC17xx.h)(0x5D5BD5BA)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include\LPC17xx.h)(0x58493F92)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5B73FB70)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B9768A4)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F17E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x59111BE4)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\mpu_armv7.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include\system_LPC17xx.h)(0x58493F92)
+F (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver\GPIO_LPC17xx.c)(0x5D5BD5BA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Libraries/LCP1768_StdPeriph_Driver/include -I ../Libraries/LCP1768_StdPeriph_Driver/source -I ../../projekt-z-symulacja/global-I./RTE/Device/LPC1768-I./RTE/_Target_1-IC:/Keil_v5/ARM/PACK/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Keil_v5/ARM/PACK/ARM/CMSIS/5.5.1/CMSIS/Driver/Include-IC:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include-IC:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/RTE_Driver-IC:/Keil_v5/ARM/PACK/Keil/MDK-Middleware/7.8.0/Board-D__UVISION_VERSION="527" -D_RTE_ -DLPC175x_6x-o ./objects/gpio_lpc17xx.o -MD)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver\GPIO_LPC17xx.h)(0x5D5BD5BA)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include\LPC17xx.h)(0x58493F92)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5B73FB70)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B9768A4)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F17E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x59111BE4)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\mpu_armv7.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include\system_LPC17xx.h)(0x58493F92)
+F (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver\PIN_LPC17xx.c)(0x5D5BD5BA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Libraries/LCP1768_StdPeriph_Driver/include -I ../Libraries/LCP1768_StdPeriph_Driver/source -I ../../projekt-z-symulacja/global-I./RTE/Device/LPC1768-I./RTE/_Target_1-IC:/Keil_v5/ARM/PACK/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Keil_v5/ARM/PACK/ARM/CMSIS/5.5.1/CMSIS/Driver/Include-IC:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include-IC:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/RTE_Driver-IC:/Keil_v5/ARM/PACK/Keil/MDK-Middleware/7.8.0/Board-D__UVISION_VERSION="527" -D_RTE_ -DLPC175x_6x-o ./objects/pin_lpc17xx.o -MD)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include\LPC17xx.h)(0x58493F92)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5B73FB70)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B9768A4)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F17E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x59111BE4)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\mpu_armv7.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include\system_LPC17xx.h)(0x58493F92)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver\PIN_LPC17xx.h)(0x5D5BD5BA)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5B73FB70)
+F (RTE\Device\LPC1768\RTE_Device.h)(0x6787C3D9)()
+F (RTE\Device\LPC1768\startup_LPC17xx.s)(0x6717EE1C)(--cpu Cortex-M3 -g-I.\RTE\Device\LPC1768-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Driver\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.8.0\Board--pd "__UVISION_VERSION SETA 527"--pd "_RTE_ SETA 1"--pd "LPC175x_6x SETA 1"--list .\listings\startup_lpc17xx.lst--xref -o .\objects\startup_lpc17xx.o--depend .\objects\startup_lpc17xx.d)
+F (RTE\Device\LPC1768\system_LPC17xx.c)(0x6717EE1C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Libraries/LCP1768_StdPeriph_Driver/include -I ../Libraries/LCP1768_StdPeriph_Driver/source -I ../../projekt-z-symulacja/global-I./RTE/Device/LPC1768-I./RTE/_Target_1-IC:/Keil_v5/ARM/PACK/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Keil_v5/ARM/PACK/ARM/CMSIS/5.5.1/CMSIS/Driver/Include-IC:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/Device/Include-IC:/Keil_v5/ARM/PACK/Keil/LPC1700_DFP/2.6.1/RTE_Driver-IC:/Keil_v5/ARM/PACK/Keil/MDK-Middleware/7.8.0/Board-D__UVISION_VERSION="527" -D_RTE_ -DLPC175x_6x-o ./objects/system_lpc17xx.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5B73FB70)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include\LPC17xx.h)(0x58493F92)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B9768A4)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F17E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x59111BE4)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\mpu_armv7.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include\system_LPC17xx.h)(0x58493F92)

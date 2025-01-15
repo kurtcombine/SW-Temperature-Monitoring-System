@@ -24,8 +24,8 @@ void LCD_Background(uint16_t c);
 void LCD_Pixel(int x, int y, uint16_t c);
 void LCD_Line(int x1, int y1, int x2, int y2, uint16_t color);
 
-void LCD_Char(int x, int y, char c, int color);
-void LCD_Text(int x, int y, const char *s, int color);
-void LCD_Addr(int x, int y, const uint8_t addr[8], int color);
+void LCD_Char(int x, int y, char c, uint16_t color);
+void LCD_Text(int x, int y, const char *s, uint16_t color);
+void LCD_Addr(int x, int y, const uint8_t addr[8], uint16_t color);
 
 void OnMockDestroyWindow();

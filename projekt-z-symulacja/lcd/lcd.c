@@ -30,22 +30,22 @@ void LCD_Pixel(int x, int y, uint16_t color) {
 
 #endif
 
-void LCD_Char(int x, int y, char c, int color) {
+void LCD_Char(int x, int y, char c, uint16_t color) {
     unsigned char char_buf[16];
     GetASCIICode(char_buf, c);
     for(int i = 0; i < 8; ++i) {
         for(int j = 0; j < 16; ++j) {
             int cond = char_buf[j] >> i & 1;
-            if(cond) LCD_Pixel(8 - i + x, j + y - 2, LCDWhite);
+            if(cond) LCD_Pixel(8 - i + x, j + y - 2, color);
         }
     }
 }
 
-void LCD_Text(int x, int y, const char *s, int color) {
+void LCD_Text(int x, int y, const char *s, uint16_t color) {
     for(int i = 0; s[i]; i++) LCD_Char(x + i * 8, y, s[i], color);
 }
 
-void LCD_Addr(int x, int y, const uint8_t addr[8], int color) {
+void LCD_Addr(int x, int y, const uint8_t addr[8], uint16_t color) {
     char buf[24];
     snprintf(
         buf, 24, "%02X%02X%02X%02X%02X%02X%02X%02X", addr[0], addr[1], addr[2], addr[3], addr[4], addr[5], addr[6], addr[7]);

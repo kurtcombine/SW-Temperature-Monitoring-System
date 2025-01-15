@@ -74,16 +74,14 @@ compiling main.c...
   size_t MEM_size();
 ..\mem/mem.h(26): warning:  #1295-D: Deprecated declaration MEM_idx - give arg types
   size_t MEM_idx();
-..\main.c(104): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *__restrict__"
+..\main.c(112): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *__restrict__"
               sprintf(buf, "%6.2f", onewire_DS18B20_get_celsius());
-..\main.c(105): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
-              LCD_Text(20 * 8, ui_line * 12, buf, LCDWhite);
-..\main.c(128): warning:  #177-D: variable "j"  was declared but never referenced
-      int j = 0;
-..\main.c: 26 warnings, 0 errors
+..\main.c(113): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+              LCD_Text(X, Y, buf, LCDWhite);
+..\main.c: 25 warnings, 0 errors
 linking...
-Program Size: Code=11942 RO-data=2054 RW-data=88 ZI-data=3856  
-".\Objects\proj.axf" - 0 Error(s), 26 Warning(s).
+Program Size: Code=12394 RO-data=2054 RW-data=96 ZI-data=3880  
+".\Objects\proj.axf" - 0 Error(s), 25 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -128,23 +126,23 @@ Package Vendor: Keil
       Source file:   Boards\Keil\MCB1700\Common\LED_MCB1700.c
 
    * Component: Keil::Device:GPDMA:1.2.0
-      Source file:   RTE_Driver\GPDMA_LPC17xx.c
       Include file:  RTE_Driver\GPDMA_LPC17xx.h
+      Source file:   RTE_Driver\GPDMA_LPC17xx.c
 
    * Component: Keil::Device:GPIO:1.1.0
-      Source file:   RTE_Driver\GPIO_LPC17xx.c
       Include file:  RTE_Driver\GPIO_LPC17xx.h
+      Source file:   RTE_Driver\GPIO_LPC17xx.c
 
    * Component: Keil::Device:PIN:1.0.0
       Source file:   RTE_Driver\PIN_LPC17xx.c
       Include file:  RTE_Driver\PIN_LPC17xx.h
 
    * Component: Keil::Device:Startup:1.0.0
-      Include file:  Device\Include\LPC17xx.h
-      Source file:   Device\Source\system_LPC17xx.c
       Include file:  RTE_Driver\Config\RTE_Device.h
+      Source file:   Device\Source\system_LPC17xx.c
+      Include file:  Device\Include\LPC17xx.h
       Source file:   Device\Source\ARM\startup_LPC17xx.s
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:00
 </pre>
 </body>
 </html>

@@ -1,0 +1,7 @@
+historyjka o czujnikach w fabryce
+jak sie pod³¹cz¹ nowe czujniki to trzeba zresetowaæ, bo siê program buguje
+jak jakiegoœ czujnika nie ma to siê wyœwietla kwadracik w lewym dolnym rogu
+i jest missing
+pullup resistor np 3,3k do pin0,0, zasilanie 3,3 V
+UART0 do debugowania i do odczytywania temperatury
+symulacja do debugowania
