@@ -1,7 +1,8 @@
 #ifdef GCC_COMPILE_TEST
-#include "LPC17xx.h"
+#include "__typedefs.h"
 LPC_UART0_TypeDef *LPC_UART0;
 LPC_UART1_TypeDef *LPC_UART1;
+uint32_t SystemCoreClock;
 int SysTick_Config(int) {}
 void PIN_Configure(int, int, int, int, int) {}
 void GPIO_PinWrite(int, int, int) {}
