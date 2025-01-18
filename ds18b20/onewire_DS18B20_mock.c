@@ -4,7 +4,7 @@
 #include "onewire_DS18B20.h"
 
 #define SEED 0
-#define DEVS 20
+#define DEVS 16
 #define ADDR_ERROR 0.5
 #define CONV_ERROR 0.2
 #define WIRE_ERROR 0.2

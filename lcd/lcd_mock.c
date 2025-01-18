@@ -2,7 +2,7 @@
 #include "lcd.h"
 #include <SDL2/SDL.h>
 
-#define PIXEL_SCALE 1
+#define PIXEL_SCALE 3
 
 typedef struct {
     SDL_Window *window;
@@ -70,12 +70,16 @@ void LCD_Background(uint16_t c) {
     SDL_RenderClear(lcd_sim.renderer);
 }
 
+int last_pixel_draw_time = 0;
+
 void LCD_Pixel(int x, int y, uint16_t c) {
     ___LCD_feed();
     ___LCD_set_color(c);
-    bool f = true;
+    if(SDL_GetTicks() - last_pixel_draw_time > 1)
+        SDL_RenderPresent(lcd_sim.renderer);
     lcd_sim.canvas.x = x * PIXEL_SCALE;
     lcd_sim.canvas.y = y * PIXEL_SCALE;
     SDL_RenderFillRect(lcd_sim.renderer, &lcd_sim.canvas);
+    last_pixel_draw_time = SDL_GetTicks();
 }
 #endif

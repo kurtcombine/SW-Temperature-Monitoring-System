@@ -1,1 +1,1 @@
-#include "LPC17xx.h"
+#include "__typedefs.h"
