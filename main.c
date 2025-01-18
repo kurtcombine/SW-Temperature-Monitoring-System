@@ -75,55 +75,124 @@ int MEM_cmp(const uint8_t addr[8]) {
 }
 
 size_t ui_line;
-#define LAYOUT_X_OFFSET 32
-#define LAYOUT_Y_OFFSET 18
+#define LAYOUT_X_LEFT_OFFSET 32
+#define LAYOUT_X_RIGHT_OFFSET (LCD_SCREEN_WIDTH - 32)
+#define LAYOUT_Y_TOP_OFFSET 22
+#define LAYOUT_Y_BOTTOM_OFFSET (LCD_SCREEN_HEIGHT - (LCD_SCREEN_HEIGHT - (LAYOUT_Y_TOP_OFFSET + 12 * 16 + 6)) / 2 - 4)
+
+void border_layout() {
+    int x1 = LAYOUT_X_LEFT_OFFSET - 3;
+    int x2 = LAYOUT_X_RIGHT_OFFSET + 3;
+    int y1 = LAYOUT_Y_TOP_OFFSET - 3;
+    int y2 = LAYOUT_Y_TOP_OFFSET + 12 * 16 + 3;
+    LCD_Line(x1, y1, x2, y1, LCDWhite);
+    LCD_Line(x1, y1, x1, y2, LCDWhite);
+    LCD_Line(x2, y1, x2, y2, LCDWhite);
+    LCD_Line(x1, y2, x2, y2, LCDWhite);
+}
+
+void prompt_no_devices() {
+    LCD_Text(LCD_SCREEN_WIDTH / 2 - 60, LAYOUT_Y_TOP_OFFSET, "NO DEVICES", LCDRed);
+}
+
+char layout_buf[8];
+
+int last_mem_size = 0;
+int error_device = 0;
+
+void prompt_error_device(const uint8_t addr[8]) {
+    for(int j = 0; j < 12; j++) {
+        for(int i = 0; i < 200; i++) { LCD_Pixel(i, LAYOUT_Y_BOTTOM_OFFSET - 1 + j, LCDBlue); }
+    }
+    if(addr == NULL) { return; }
+    LCD_Addr(4, LAYOUT_Y_BOTTOM_OFFSET, addr, LCDRed);
+    error_device++;
+    snprintf(layout_buf, 8, "%d", error_device);
+    LCD_Text(20 * 8 + 8, LAYOUT_Y_BOTTOM_OFFSET, layout_buf, LCDRed);
+}
+
+void prompt_pages(int dev_idx) {
+    for(int j = 0; j < 12; j++) {
+        for(int i = 200; i < LCD_SCREEN_WIDTH; i++) { LCD_Pixel(i, LAYOUT_Y_BOTTOM_OFFSET - 1 + j, LCDBlue); }
+    }
+    for(int j = 0; j < 12; j++) {
+        for(int i = 100; i < LCD_SCREEN_WIDTH - 100; i++) { LCD_Pixel(i, 3 + j, LCDBlue); }
+    }
+    int page = dev_idx / 16 + 1, allpages = (MEM_size() + 15) / 16;
+    snprintf(layout_buf, 8, "%d/%d", page, allpages);
+    LCD_Text(LCD_SCREEN_WIDTH / 2 - 8 / 2 * strlen(layout_buf), 3, layout_buf, LCDWhite);
+
+    snprintf(layout_buf, 8, dev_idx == last_mem_size - 1 ? "/%d" : MEM_size() == last_mem_size ? "%d" : "+%d", MEM_size());
+    LCD_Text(LCD_SCREEN_WIDTH - 8 * strlen(layout_buf) - 4, LAYOUT_Y_BOTTOM_OFFSET, layout_buf, LCDWhite);
+}
+
+void on_last_page() {
+    if(MEM_size() == 0) LCD_Text(360 / 2 - 60, 0, "NO DEVICES", LCDRed);
+    prompt_pages(MEM_idx() - 1);
+
+    for(int ui = ui_line; ui < 16; ui++) {
+        for(int j = 0; j < 12; j++) {
+            for(int i = LAYOUT_X_LEFT_OFFSET; i < LAYOUT_X_RIGHT_OFFSET; i++) {
+                LCD_Pixel(i, ui * 12 - 1 + j + LAYOUT_Y_TOP_OFFSET, LCDBlue);
+            }
+        }
+    }
+}
+
+#define O 12
+
 void feed_ui(int state) {
     DEBUG("FEED: ");
 
-    for(int j = 0; j < 12; j++) {
-        for(int i = LAYOUT_X_OFFSET; i < LCD_SCREEN_WIDTH - LAYOUT_X_OFFSET; i++) {
-            LCD_Pixel(i, ui_line * 12 - 2 + j + LAYOUT_Y_OFFSET, LCDBlue);
-        }
+    if(ui_line == 16) {
+        ui_line = 0;
+        prompt_pages(MEM_idx() - 1);
+        delay_ms(500);
+        prompt_pages(MEM_idx());
     }
-    int X = 20 * 8 + LAYOUT_X_OFFSET, Y = ui_line * 12 + LAYOUT_Y_OFFSET;
-    if(state == SEARCH_GOOD) LCD_Addr(LAYOUT_X_OFFSET, Y, MEM_top(), LCDWhite);
+
+    int X = 20 * 8 + LAYOUT_X_LEFT_OFFSET, Y = ui_line * 12 + LAYOUT_Y_TOP_OFFSET;
+    for(int j = 0; j < 12; j++) {
+        for(int i = LAYOUT_X_LEFT_OFFSET; i < LAYOUT_X_RIGHT_OFFSET; i++) LCD_Pixel(i, Y - 1 + j, LCDBlue);
+    }
+    if(state == SEARCH_GOOD) LCD_Addr(LAYOUT_X_LEFT_OFFSET, Y, MEM_top(), LCDWhite);
     else
-        LCD_Addr(LAYOUT_X_OFFSET, Y, MEM_top(), LCDRed);
+        LCD_Addr(LAYOUT_X_LEFT_OFFSET, Y, MEM_top(), LCDRed);
     switch(state) {
         case SEARCH_ADDR_CRC_ERR:
             DEBUG(" ADDR CRC ERR\r\n");
-            LCD_Text(X, Y, "ADDR CRC ERR", LCDWhite);
+            LCD_Text(X, Y, "ADDR CRC ERR", LCDRed);
             break;
         case SEARCH_BUS_ERR:
             DEBUG(" BUS ERR\r\n");
-            LCD_Text(X, Y, "BUS ERR", LCDWhite);
+            LCD_Text(X + 4, Y, "  BUS ERR", LCDRed);
             break;
         case SEARCH_DATA_CRC_ERR:
             DEBUG(" DATA CRC ERR\r\n");
-            LCD_Text(X, Y, "DATA CRC ERR", LCDWhite);
+            LCD_Text(X, Y, "DATA CRC ERR", LCDRed);
             break;
         case SEARCH_MISSING:
             DEBUG(" MISSING\r\n");
-            LCD_Text(X, Y, "MISSING", LCDWhite);
+            LCD_Text(X + 4, Y, "  MISSING", LCDRed);
             break;
         case SEARCH_GOOD:
             DEBUG(" GOOD\r\n");
             uint8_t buf[10];
             sprintf(buf, "%6.2f", onewire_DS18B20_get_celsius());
-            LCD_Text(X, Y, buf, LCDWhite);
-            LCD_Char(X + 8 * 6, Y, '\x7f', LCDWhite);
-            LCD_Char(X + 8 * 6 + 7, Y, 'C', LCDWhite);
+            LCD_Text(X + O, Y, buf, LCDWhite);
+            LCD_Char(X + O + 8 * 6, Y, '\x7f', LCDWhite);
+            LCD_Char(X + O + 8 * 6 + 7, Y, 'C', LCDWhite);
             break;
         default:
             DEBUG("unreachable!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
             DEBUG_int(state);
             DEBUG("\r\n");
     }
+    if(state != SEARCH_GOOD) prompt_error_device(MEM_top());
     ui_line++;
 }
 
 uint8_t history_fixup[25] = {};
-char buf[8];
 
 int main() {
     global_setup();
@@ -131,14 +200,9 @@ int main() {
     onewire_DS18B20_setup();
     LCD_setup();
     MEM_setup();
+
     LCD_Background(LCDBlue);
-    int xo = 25;
-    LCD_Line(xo, LAYOUT_Y_OFFSET - 3, LCD_SCREEN_WIDTH - xo, LAYOUT_Y_OFFSET - 3, LCDWhite);
-    LCD_Line(xo, LCD_SCREEN_HEIGHT - LAYOUT_Y_OFFSET + 3 - 12, LCD_SCREEN_WIDTH - xo,
-        LCD_SCREEN_HEIGHT - LAYOUT_Y_OFFSET + 3 - 12, LCDWhite);
-    LCD_Line(xo, LAYOUT_Y_OFFSET - 3, xo, LCD_SCREEN_HEIGHT - LAYOUT_Y_OFFSET + 3 - 12, LCDWhite);
-    LCD_Line(LCD_SCREEN_WIDTH - xo, LAYOUT_Y_OFFSET - 3, LCD_SCREEN_WIDTH - xo, LCD_SCREEN_HEIGHT - LAYOUT_Y_OFFSET + 3 - 12,
-        LCDWhite);
+    border_layout();
 
 #ifdef MOCKED_EMBEDDED
     onewire_DS18B20_setConversionTime(100);
@@ -158,10 +222,14 @@ int main() {
         if(addr != NULL && cmp == -1) {
             uint8_t *x;
             int ok = 1;
+#ifndef MOCKED_EMBEDDED
             for(x = history_fixup; *x != 0; ++x)
                 if(addr[7] == *x) ok = 0;
             if(ok) {
                 *x = addr[7];
+#else
+            if(true) {
+#endif
                 DEBUG("PUSH ");
                 DEBUG_addr(addr);
                 DEBUG("\r\n");
@@ -172,26 +240,22 @@ int main() {
         MEM_pop();
 
         if(state == SEARCH_RESET) {
-            if(ui_line == 0) LCD_Text(360 / 2 - 60, 0, "NO DEVICES", LCDRed);
-            ui_line = 0;
             DEBUG("RESET ");
             DEBUG_addr(MEM_top());
+            if(MEM_size() == 0) prompt_no_devices();
+            last_mem_size = MEM_size();
+            on_last_page();
+            if(MEM_size() > 16) delay_ms(500);
+            if(error_device == 0) prompt_error_device(NULL);
+            error_device = 0;
+            prompt_pages(0);
+            ui_line = 0;
             MEM_reset();
             DEBUG(" ");
             DEBUG_addr(MEM_top());
             DEBUG("\r\n");
-
-            for(int j = 0; j < 12; j++) {
-                for(int i = 0; i < LCD_SCREEN_WIDTH; i++) {
-                    LCD_Pixel(i, LCD_SCREEN_HEIGHT - LAYOUT_Y_OFFSET - 2 + j, LCDBlue);
-                }
-            }
-            snprintf(buf, 8, "100/100");
-            strlen(buf);
-            LCD_Text(LCD_SCREEN_WIDTH / 2 - 8 / 2 * strlen(buf), LCD_SCREEN_HEIGHT - LAYOUT_Y_OFFSET, buf, LCDWhite);
-            snprintf(buf, 8, "%d", MEM_size());
-            LCD_Text(LCD_SCREEN_WIDTH - 8 * strlen(buf) - 4, LCD_SCREEN_HEIGHT - LAYOUT_Y_OFFSET, buf, LCDWhite);
-            continue;
         }
     }
 }
+/// zamiast czerwonego czerwonego boxa to adres
+/// liczba zepsutych

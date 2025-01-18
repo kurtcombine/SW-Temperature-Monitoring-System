@@ -1,5 +1,7 @@
 #include "mem/mem.h"
 
+void ___LCD_render() {}
+
 void assert(const uint8_t *exp, const uint8_t *got, size_t line) {
     if(exp == NULL && got == NULL) return;
     if(exp == NULL || got == NULL || memcmp(exp, got, 8) != 0) {

@@ -16,7 +16,10 @@ void delay_us(int us) {
     pthread_sigmask(SIG_SETMASK, &oldset, NULL);
 }
 
+void ___LCD_render();
+
 void delay_ms(int ms) {
+    ___LCD_render();
     delay_us(ms * 1000);
 }
 
