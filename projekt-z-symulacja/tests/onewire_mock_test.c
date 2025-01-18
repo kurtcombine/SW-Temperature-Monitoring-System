@@ -1,6 +1,8 @@
 #include "ds18b20/onewire_DS18B20.h"
 #include "ds18b20/onewire_DS18B20.c"
 
+void ___LCD_render() {}
+
 int main() {
     global_setup();
     onewire_setup();

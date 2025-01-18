@@ -12,6 +12,7 @@ typedef struct {
 } LcdSimulator;
 
 LcdSimulator lcd_sim;
+int last_render_time = 0;
 void ___LCD_feed();
 void ___LCD_exit();
 
@@ -22,7 +23,7 @@ void LCD_setup() {
         exit(1);
     }
 
-    lcd_sim.window = SDL_CreateWindow("SDL Canvas Window", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
+    lcd_sim.window = SDL_CreateWindow("LCD Simulation", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
         LCD_SCREEN_WIDTH * PIXEL_SCALE, LCD_SCREEN_HEIGHT * PIXEL_SCALE, SDL_WINDOW_SHOWN);
     if(!lcd_sim.window) {
         printf("SDL_CreateWindow Error: %s\n", SDL_GetError());
@@ -40,9 +41,16 @@ void LCD_setup() {
     }
     ___LCD_feed();
 }
+
 void ___LCD_feed() {
     while(SDL_PollEvent(&lcd_sim.event))
         if(lcd_sim.event.type == SDL_QUIT) ___LCD_exit();
+}
+
+void ___LCD_render() {
+    if(SDL_GetTicks() - last_render_time < 3) delay_us(500);
+    SDL_RenderPresent(lcd_sim.renderer);
+    last_render_time = SDL_GetTicks();
 }
 
 void ___LCD_exit() {
@@ -67,19 +75,17 @@ void LCD_Background(uint16_t c) {
     ___LCD_feed();
     ___LCD_set_color(c);
     SDL_RenderPresent(lcd_sim.renderer);
+    last_render_time = SDL_GetTicks();
     SDL_RenderClear(lcd_sim.renderer);
 }
-
-int last_pixel_draw_time = 0;
 
 void LCD_Pixel(int x, int y, uint16_t c) {
     ___LCD_feed();
     ___LCD_set_color(c);
-    if(SDL_GetTicks() - last_pixel_draw_time > 1)
-        SDL_RenderPresent(lcd_sim.renderer);
+    if(SDL_GetTicks() - last_render_time > 1) SDL_RenderPresent(lcd_sim.renderer);
     lcd_sim.canvas.x = x * PIXEL_SCALE;
     lcd_sim.canvas.y = y * PIXEL_SCALE;
     SDL_RenderFillRect(lcd_sim.renderer, &lcd_sim.canvas);
-    last_pixel_draw_time = SDL_GetTicks();
+    last_render_time = SDL_GetTicks();
 }
 #endif
