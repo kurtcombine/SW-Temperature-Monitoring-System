@@ -40,23 +40,21 @@ void delay_ms(int ms) {
 void DEBUG(uint8_t *str) {
     UART_Send(str);
 }
+ uint8_t buf[24];
 void DEBUG_addr(const uint8_t addr[8]) {
     if(addr == NULL) {
         DEBUG("NULL");
         return;
     }
-    uint8_t buf[24];
     snprintf(buf, 24, "%02X:%02X:%02X:%02X:%02X:%02X:%02X:%02X", addr[0], addr[1], addr[2], addr[3], addr[4], addr[5], addr[6],
         addr[7]);
     DEBUG(buf);
 }
 void DEBUG_int(int x) {
-    uint8_t buf[12];
     snprintf(buf, 12, "%d", x);
     DEBUG(buf);
 }
 void DEBUG_float(double x) {
-    uint8_t buf[24];
     snprintf(buf, 24, "%f", x);
     DEBUG(buf);
 }

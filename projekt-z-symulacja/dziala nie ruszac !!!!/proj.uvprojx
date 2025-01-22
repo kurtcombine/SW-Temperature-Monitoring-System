@@ -10,8 +10,8 @@
       <TargetName>Target 1</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060750::V5.06 update 6 (build 750)::ARMCC</pCCUsed>
-      <uAC6>0</uAC6>
+      <pCCUsed>6110000::V6.11::.\ARMCLANG</pCCUsed>
+      <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>LPC1768</Device>
@@ -48,14 +48,14 @@
             <NotGenerated>0</NotGenerated>
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
-          <OutputDirectory>.\</OutputDirectory>
+          <OutputDirectory>.\Objects\</OutputDirectory>
           <OutputName>proj</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>0</CreateHexFile>
           <DebugInformation>1</DebugInformation>
-          <BrowseInformation>0</BrowseInformation>
-          <ListingPath>.\</ListingPath>
+          <BrowseInformation>1</BrowseInformation>
+          <ListingPath>.\Listings\</ListingPath>
           <HexFormatSelection>1</HexFormatSelection>
           <Merge32K>0</Merge32K>
           <CreateBatchFile>0</CreateBatchFile>
@@ -134,11 +134,11 @@
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
             <Capability>1</Capability>
-            <DriverSelection>-1</DriverSelection>
+            <DriverSelection>4096</DriverSelection>
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>BIN\UL2CM3.DLL</Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -187,13 +187,13 @@
             <RvdsMve>0</RvdsMve>
             <hadIRAM2>1</hadIRAM2>
             <hadIROM2>0</hadIROM2>
-            <StupSel>0</StupSel>
+            <StupSel>8</StupSel>
             <useUlib>0</useUlib>
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
             <nSecure>0</nSecure>
-            <RoSelD>0</RoSelD>
-            <RwSelD>5</RwSelD>
+            <RoSelD>3</RoSelD>
+            <RwSelD>4</RwSelD>
             <CodeSel>0</CodeSel>
             <OptFeed>0</OptFeed>
             <NoZi1>0</NoZi1>
@@ -204,13 +204,13 @@
             <Ro1Chk>0</Ro1Chk>
             <Ro2Chk>0</Ro2Chk>
             <Ro3Chk>0</Ro3Chk>
-            <Ir1Chk>0</Ir1Chk>
+            <Ir1Chk>1</Ir1Chk>
             <Ir2Chk>0</Ir2Chk>
             <Ra1Chk>0</Ra1Chk>
             <Ra2Chk>0</Ra2Chk>
             <Ra3Chk>0</Ra3Chk>
-            <Im1Chk>0</Im1Chk>
-            <Im2Chk>0</Im2Chk>
+            <Im1Chk>1</Im1Chk>
+            <Im2Chk>1</Im2Chk>
             <OnChipMemories>
               <Ocm1>
                 <Type>0</Type>
@@ -258,17 +258,17 @@
                 <Size>0x0</Size>
               </XRAM>
               <OCR_RVCT1>
-                <Type>0</Type>
+                <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
                 <Size>0x0</Size>
               </OCR_RVCT1>
               <OCR_RVCT2>
-                <Type>0</Type>
+                <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
                 <Size>0x0</Size>
               </OCR_RVCT2>
               <OCR_RVCT3>
-                <Type>0</Type>
+                <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
                 <Size>0x0</Size>
               </OCR_RVCT3>
@@ -278,7 +278,7 @@
                 <Size>0x80000</Size>
               </OCR_RVCT4>
               <OCR_RVCT5>
-                <Type>0</Type>
+                <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
                 <Size>0x0</Size>
               </OCR_RVCT5>
@@ -312,7 +312,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>1</Optim>
+            <Optim>2</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -321,11 +321,11 @@
             <PlainCh>0</PlainCh>
             <Ropi>0</Ropi>
             <Rwpi>0</Rwpi>
-            <wLevel>2</wLevel>
+            <wLevel>3</wLevel>
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
             <uC99>1</uC99>
-            <uGnu>0</uGnu>
+            <uGnu>1</uGnu>
             <useXO>0</useXO>
             <v6Lang>3</v6Lang>
             <v6LangP>3</v6LangP>
@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>..;..\ds18b20;..\global;..\lcd;..\mem;..\embedded_libraries</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -360,14 +360,14 @@
             </VariousControls>
           </Aads>
           <LDads>
-            <umfTarg>0</umfTarg>
+            <umfTarg>1</umfTarg>
             <Ropi>0</Ropi>
             <Rwpi>0</Rwpi>
             <noStLib>0</noStLib>
             <RepFail>1</RepFail>
             <useFile>0</useFile>
-            <TextAddressRange></TextAddressRange>
-            <DataAddressRange></DataAddressRange>
+            <TextAddressRange>0x00000000</TextAddressRange>
+            <DataAddressRange>0x10000000</DataAddressRange>
             <pXoBase></pXoBase>
             <ScatterFile></ScatterFile>
             <IncludeLibs></IncludeLibs>
@@ -475,9 +475,6 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>::Board Support</GroupName>
-        </Group>
-        <Group>
           <GroupName>::CMSIS</GroupName>
         </Group>
         <Group>
@@ -488,23 +485,10 @@
   </Targets>
 
   <RTE>
-    <apis>
-      <api Capiversion="1.0.0" Cclass="Board Support" Cgroup="LED" exclusive="0">
-        <package name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.8.0"/>
-        <targetInfos>
-          <targetInfo name="Target 1"/>
-        </targetInfos>
-      </api>
-    </apis>
+    <apis/>
     <components>
       <component Cclass="CMSIS" Cgroup="CORE" Cvendor="ARM" Cversion="6.1.0" condition="ARMv6_7_8-M Device">
         <package name="CMSIS" schemaVersion="1.7.36" url="https://www.keil.com/pack/" vendor="ARM" version="6.1.0"/>
-        <targetInfos>
-          <targetInfo name="Target 1"/>
-        </targetInfos>
-      </component>
-      <component Capiversion="1.0.0" Cbundle="MCB1700" Cclass="Board Support" Cgroup="LED" Cvendor="Keil" Cversion="1.0.0" condition="LPC1700 CMSIS PIN GPIO">
-        <package name="LPC1700_DFP" schemaVersion="1.2" url="http://www.keil.com/pack/" vendor="Keil" version="2.6.1"/>
         <targetInfos>
           <targetInfo name="Target 1"/>
         </targetInfos>

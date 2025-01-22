@@ -1,9 +1,0 @@
-.\objects\mem.o: ..\mem\mem.c
-.\objects\mem.o: ..\mem\mem.h
-.\objects\mem.o: ..\mem\../global/global.h
-.\objects\mem.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-.\objects\mem.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-.\objects\mem.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
-.\objects\mem.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-.\objects\mem.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
-.\objects\mem.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

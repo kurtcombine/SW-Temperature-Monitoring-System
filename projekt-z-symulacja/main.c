@@ -122,7 +122,11 @@ void prompt_pages(int dev_idx) {
     snprintf(layout_buf, 8, "%d/%d", page, allpages);
     LCD_Text(LCD_SCREEN_WIDTH / 2 - 8 / 2 * strlen(layout_buf), 3, layout_buf, LCDWhite);
 
-    snprintf(layout_buf, 8, dev_idx == last_mem_size - 1 ? "/%d" : MEM_size() == last_mem_size ? "%d" : "+%d", MEM_size());
+		int size = MEM_size();
+		DEBUG("---------------");
+		DEBUG_int(size);
+		DEBUG("---------------");
+    snprintf(layout_buf, 8, dev_idx == last_mem_size - 1 ? "/%u" : size == last_mem_size ? "%u" : "+%u", size);
     LCD_Text(LCD_SCREEN_WIDTH - 8 * strlen(layout_buf) - 4, LAYOUT_Y_BOTTOM_OFFSET, layout_buf, LCDWhite);
 }
 
@@ -140,6 +144,7 @@ void on_last_page() {
 }
 
 #define O 12
+uint8_t buf_f[10];
 
 void feed_ui(int state) {
     DEBUG("FEED: ");
@@ -177,9 +182,8 @@ void feed_ui(int state) {
             break;
         case SEARCH_GOOD:
             DEBUG(" GOOD\r\n");
-            uint8_t buf[10];
-            sprintf(buf, "%6.2f", onewire_DS18B20_get_celsius());
-            LCD_Text(X + O, Y, buf, LCDWhite);
+            sprintf(buf_f, "%6.2f", onewire_DS18B20_get_celsius());
+            LCD_Text(X + O, Y, buf_f, LCDWhite);
             LCD_Char(X + O + 8 * 6, Y, '\x7f', LCDWhite);
             LCD_Char(X + O + 8 * 6 + 7, Y, 'C', LCDWhite);
             break;

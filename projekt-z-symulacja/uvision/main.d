@@ -1,0 +1,14 @@
+.\main.o: ..\main.c
+.\main.o: ..\lcd/lcd.h
+.\main.o: ..\lcd/../global/global.h
+.\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\main.o: ..\lcd/asciiLib.h
+.\main.o: ..\ds18b20/onewire_DS18B20.h
+.\main.o: ..\ds18b20/../global/global.h
+.\main.o: ..\mem/mem.h
+.\main.o: ..\mem/../global/global.h
