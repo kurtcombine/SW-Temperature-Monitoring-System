@@ -14,6 +14,7 @@ void onewire_skip();
 void onewire_setup();
 uint8_t onewire_crc8(const uint8_t *data, uint8_t length);
 void onewire_reset_search();
+// FIXME: mock 1-Wire search algorithm and check if it returns all devices in sorted order
 bool onewire_search(uint8_t *new_addr, bool search_mode);
 
 extern uint8_t DS18B20__data[9];

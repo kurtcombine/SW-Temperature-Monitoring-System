@@ -369,7 +369,6 @@ typedef struct {
     uint16_t RESERVED21;
 } LPC_RTC_TypeDef;
 
-
 extern LPC_UART0_TypeDef *LPC_UART0;
 extern LPC_UART1_TypeDef *LPC_UART1;
 extern uint32_t SystemCoreClock;
