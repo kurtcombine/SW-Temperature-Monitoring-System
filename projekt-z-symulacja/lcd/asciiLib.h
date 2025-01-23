@@ -5,5 +5,5 @@
 #define __AsciiLib_H
 #include <string.h>
 
-void GetASCIICode(unsigned char* pBuffer,unsigned char ASCII);
+void GetASCIICode(unsigned char* pBuffer, unsigned char ASCII);
 #endif

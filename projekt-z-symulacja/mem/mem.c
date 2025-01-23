@@ -88,4 +88,3 @@ size_t MEM_size() {
 size_t MEM_idx() {
     return idx;
 }
-

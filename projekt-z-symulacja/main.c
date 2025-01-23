@@ -91,8 +91,21 @@ void border_layout() {
     LCD_Line(x1, y2, x2, y2, LCDWhite);
 }
 
+int loading = 0;
+
 void prompt_no_devices() {
-    LCD_Text(LCD_SCREEN_WIDTH / 2 - 60, LAYOUT_Y_TOP_OFFSET, "NO DEVICES", LCDRed);
+    LCD_Text(LCD_SCREEN_WIDTH / 2 - 42, LAYOUT_Y_TOP_OFFSET, "NO DEVICES", LCDRed);
+    char c;
+    switch(loading) {
+        case 0: c = '/'; break;
+        case 1: c = '-'; break;
+        case 2: c = '\\'; break;
+        case 3: c = '|'; break;
+    }
+    loading = (loading + 1) % 4;
+    LCD_Char(LCD_SCREEN_WIDTH / 2 - 4, LAYOUT_Y_TOP_OFFSET + 12, c, LCDRed);
+    delay_ms(200);
+    ui_line = 1;
 }
 
 char layout_buf[8];
@@ -122,16 +135,12 @@ void prompt_pages(int dev_idx) {
     snprintf(layout_buf, 8, "%d/%d", page, allpages);
     LCD_Text(LCD_SCREEN_WIDTH / 2 - 8 / 2 * strlen(layout_buf), 3, layout_buf, LCDWhite);
 
-		int size = MEM_size();
-		DEBUG("---------------");
-		DEBUG_int(size);
-		DEBUG("---------------");
+    int size = MEM_size();
     snprintf(layout_buf, 8, dev_idx == last_mem_size - 1 ? "/%u" : size == last_mem_size ? "%u" : "+%u", size);
     LCD_Text(LCD_SCREEN_WIDTH - 8 * strlen(layout_buf) - 4, LAYOUT_Y_BOTTOM_OFFSET, layout_buf, LCDWhite);
 }
 
 void on_last_page() {
-    if(MEM_size() == 0) LCD_Text(360 / 2 - 60, 0, "NO DEVICES", LCDRed);
     prompt_pages(MEM_idx() - 1);
 
     for(int ui = ui_line; ui < 16; ui++) {
@@ -196,8 +205,6 @@ void feed_ui(int state) {
     ui_line++;
 }
 
-uint8_t history_fixup[25] = {};
-
 int main() {
     global_setup();
     onewire_setup();
@@ -211,6 +218,7 @@ int main() {
 #ifdef MOCKED_EMBEDDED
     onewire_DS18B20_setConversionTime(100);
 #endif
+
     uint8_t addr_buf[8], *addr = NULL;
     ui_line = 0;
     while(true) {
@@ -224,21 +232,10 @@ int main() {
             cmp = MEM_cmp(addr);
         }
         if(addr != NULL && cmp == -1) {
-            uint8_t *x;
-            int ok = 1;
-#ifndef MOCKED_EMBEDDED
-            for(x = history_fixup; *x != 0; ++x)
-                if(addr[7] == *x) ok = 0;
-            if(ok) {
-                *x = addr[7];
-#else
-            if(true) {
-#endif
-                DEBUG("PUSH ");
-                DEBUG_addr(addr);
-                DEBUG("\r\n");
-                MEM_push(addr);  // cmp => 0
-            }
+            DEBUG("PUSH ");
+            DEBUG_addr(addr);
+            DEBUG("\r\n");
+            MEM_push(addr);  // cmp => 0
         }
         if(MEM_top() != NULL) feed_ui(state);
         MEM_pop();
@@ -261,5 +258,3 @@ int main() {
         }
     }
 }
-/// zamiast czerwonego czerwonego boxa to adres
-/// liczba zepsutych

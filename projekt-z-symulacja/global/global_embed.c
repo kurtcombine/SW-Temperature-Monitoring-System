@@ -40,7 +40,8 @@ void delay_ms(int ms) {
 void DEBUG(uint8_t *str) {
     UART_Send(str);
 }
- uint8_t buf[24];
+
+uint8_t buf[24];
 void DEBUG_addr(const uint8_t addr[8]) {
     if(addr == NULL) {
         DEBUG("NULL");
